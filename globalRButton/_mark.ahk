@@ -1,27 +1,46 @@
 _MarkRButtonUp:
-  _MarkFlagRButtonUp := 1
+  MarkFlagRButtonAll := 1
+  MarkFlagRButtonUp := 1
 return
 
 _MarkRButtonWheelUp:
-  _MarkFlagRButtonWheelUp := 1
+  MarkFlagRButtonAll := 1
+  MarkFlagRButtonWheel := 1
+  MarkFlagRButtonUpCancel := 1
+  MarkFlagRButtonWheelUp := 1
 return
 
 _MarkRButtonWheelDown:
-  _MarkFlagRButtonWheelDown := 1
+  MarkFlagRButtonAll := 1
+  MarkFlagRButtonWheel := 1
+  MarkFlagRButtonUpCancel := 1
+  MarkFlagRButtonWheelDown := 1
 return
 
 _MarkRButtonLButton:
-  _MarkFlagRButtonLButton := 1
+  MarkFlagRButtonAll := 1
+  MarkFlagRButtonLButton := 1
+  MarkFlagRButtonUpCancel := 1
+  MarkFlagRButtonLButtonDown := 1
 return
 
 _MarkRButtonLButtonUp:
-  _MarkFlagRButtonLButtonUp := 1
+  MarkFlagRButtonAll := 1
+  MarkFlagRButtonLButton := 1
+  MarkFlagRButtonUpCancel := 1
+  MarkFlagRButtonLButtonUp := 1
 return
 
 _MarkRButtonMButton:
-  _MarkFlagRButtonMButton := 1
+  MarkFlagRButtonAll := 1
+  MarkFlagRButtonMButton := 1
+  MarkFlagRButtonUpCancel := 1
+  MarkFlagRButtonMButtonDown := 1
 return
 
 _MarkRButtonMButtonUp:
-  _MarkFlagRButtonMButtonUp := 1
+  MarkFlagRButtonAll := 1
+  MarkFlagRButtonMButton := 1
+  MarkFlagRButtonUpCancel := 1
+  MarkFlagRButtonMButtonUp := 1
 return

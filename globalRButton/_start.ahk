@@ -1,3 +1,18 @@
+InitGlobalRButton:
+  MarkFlagRButtonAll := 0
+  MarkFlagRButtonLButton := 0
+  MarkFlagRButtonLButtonDown := 0
+  MarkFlagRButtonLButtonUp := 0
+  MarkFlagRButtonMButton := 0
+  MarkFlagRButtonMButtonDown := 0
+  MarkFlagRButtonMButtonUp := 0
+  MarkFlagRButtonUp := 0
+  MarkFlagRButtonUpCancel := 0
+  MarkFlagRButtonWheel := 0
+  MarkFlagRButtonWheelDown := 0
+  MarkFlagRButtonWheelUp := 0
+return
+
 SelectedWindow(SelectedWindow_Id) {
   global SelectedWindow_Title
   global SelectedWindow_ProcessName
@@ -8,6 +23,7 @@ SelectedWindow(SelectedWindow_Id) {
 }
 
 GlobalRButtonStart:
+  gosub InitGlobalRButton
   gosub DrawCircle
   gosub CntGlobalRButton
   mousegetpos, SelectedWindow_X, SelectedWindow_Y, SelectedWindow_Id
