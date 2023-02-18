@@ -1,8 +1,8 @@
 RButtonWatcher:
   GetKeyState, RButtonSta, RButton, P
   if (RButtonSta == "U") {
-    SetTimer, RButtonWatcher, Off
+    settimer, RButtonWatcher, off
   }
-  GoSub, MouseCursorDirection
+  gosub, MouseCursorDirection
   tooltip %Direction%+%RButtonPressCnt%-%RButtonTimerCnt%
-Return
+return

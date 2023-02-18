@@ -12,5 +12,5 @@ GlobalRButtonStart:
   gosub CntGlobalRButton
   mousegetpos, SelectedWindow_X, SelectedWindow_Y, SelectedWindow_Id
   SelectedWindow(SelectedWindow_Id)
-  SetTimer, RButtonWatcher, 10
+  settimer, RButtonWatcher, 10
 return
