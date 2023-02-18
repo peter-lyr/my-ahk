@@ -1,7 +1,3 @@
-#Include %A_ScriptDir%\globalRButton\_mark.ahk
-#Include %A_ScriptDir%\globalRButton\_start.ahk
-#Include %A_ScriptDir%\globalRButton\_end.ahk
-
 _RButton:
   gosub GlobalRButtonStart
 return
