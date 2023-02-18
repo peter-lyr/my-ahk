@@ -5,7 +5,6 @@ return
 _RButtonUp:
   gosub _MarkRButtonUp
   gosub GlobalRButtonEnd
-  click Right
 return
 
 _RButtonWheelUp:
