@@ -1,0 +1,3 @@
+GlobalRButtonStart:
+  gosub DrawCircle
+return

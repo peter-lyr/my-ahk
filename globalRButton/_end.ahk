@@ -1,0 +1,3 @@
+GlobalRButtonEnd:
+  gosub HideCircle
+return
