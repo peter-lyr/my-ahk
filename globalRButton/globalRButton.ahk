@@ -5,6 +5,8 @@ RButtonTimerOut := 15
 RButtonTimerCnt := RButtonTimerOut
 RButtonPressCntMax := 5
 
+Direction := ""
+
 gosub InitCircle
 
 #Include %A_ScriptDir%\globalRButton\_hotkey.ahk
@@ -13,6 +15,8 @@ gosub InitCircle
 #Include %A_ScriptDir%\globalRButton\_mark.ahk
 #Include %A_ScriptDir%\globalRButton\_start.ahk
 #Include %A_ScriptDir%\globalRButton\_end.ahk
+#Include %A_ScriptDir%\globalRButton\_watcher.ahk
+#Include %A_ScriptDir%\globalRButton\_direction.ahk
 
 #if RButtonEnable
 RButton::gosub _RButton

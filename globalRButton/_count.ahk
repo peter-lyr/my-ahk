@@ -1,6 +1,5 @@
 RButtonTimer:
   RButtonTimerCnt += 1
-  tooltip %RButtonPressCnt%-%RButtonTimerCnt%
   if (RButtonTimerCnt > RButtonTimerOut) {
     settimer, RButtonTimer, off
     return
