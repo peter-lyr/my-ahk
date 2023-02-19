@@ -24,7 +24,7 @@ gosub InitCircle
 #Include %A_ScriptDir%\globalRButton\_is.ahk
 #Include %A_ScriptDir%\globalRButton\_directions\center1.ahk
 #Include %A_ScriptDir%\globalRButton\labels\shiftWheel.ahk
-#Include %A_ScriptDir%\globalRButton\labels\test.ahk
+#Include %A_ScriptDir%\globalRButton\labels\copy.ahk
 
 #if RButtonEnable
 RButton::gosub _RButton

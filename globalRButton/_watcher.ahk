@@ -35,7 +35,8 @@ return
 
 RButtonWatcher:
   getkeystate, RButtonSta, RButton, P
-  if (RButtonSta == "U") {
+  if (RButtonSta == "U")
+  {
     settimer, RButtonWatcher, off
   }
   gosub MouseCursorDirection

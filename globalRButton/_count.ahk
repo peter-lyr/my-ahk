@@ -1,15 +1,18 @@
 RButtonTimer:
   RButtonTimerCnt += 1
-  if (RButtonTimerCnt > RButtonTimerOut) {
+  if (RButtonTimerCnt > RButtonTimerOut)
+  {
     settimer, RButtonTimer, off
     return
   }
 return
 
 CntGlobalRButton:
-  if (RButtonTimerCnt < RButtonTimerOut) {
+  if (RButtonTimerCnt < RButtonTimerOut)
+  {
     RButtonPressCnt += 1
-    if (RButtonPressCnt > RButtonPressCntMax) {
+    if (RButtonPressCnt > RButtonPressCntMax)
+    {
       RButtonPressCnt := RButtonPressCntMax
     }
   } else {
@@ -21,7 +24,8 @@ return
 
 CntGlobalRButtonEnd:
   settimer, RButtonTimer, off
-  if (RButtonTimerCnt < RButtonTimerOut) {
+  if (RButtonTimerCnt < RButtonTimerOut)
+  {
     RButtonTimerCnt := 0
     settimer, RButtonTimer, 10
   }

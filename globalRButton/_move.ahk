@@ -1,15 +1,19 @@
 MoveWindowWatch:
   coordmode, Mouse, Screen
   getkeystate, _LButtonStatus, LButton, P
-  if (_LButtonStatus == "U") {
+  if (_LButtonStatus == "U")
+  {
     settimer, MoveWindowWatch, Off
     FlagMoveWindow := 0
+    tooltip
     return
   }
-  if (MarkFlagRButtonUp == 1) {
+  if (MarkFlagRButtonUp == 1)
+  {
     settimer, MoveWindowWatch, Off
     winmove, ahk_id %MoveWindow_Id%, , %MoveWindow_OriX%, %MoveWindow_OriY%
     FlagMoveWindow := 0
+    tooltip
     return
   }
   mousegetpos, _X2, _Y2
@@ -25,14 +29,16 @@ MoveWindow:
   coordmode, Mouse, Screen
   mousegetpos, _X1, _Y1, MoveWindow_Id
   winget, _MaxMaxStatus, MinMax, ahk_id %MoveWindow_Id%
-  if (_MaxMaxStatus or SelectedWindow_IsDesktop() or MButtonSta == "D") {
+  if (_MaxMaxStatus or SelectedWindow_IsDesktop() or MButtonSta == "D")
+  {
     FlagMoveWindow := 0
     return
   }
   FlagMoveWindow := 1
   wingetpos, MoveWindow_OriX, MoveWindow_OriY, , , ahk_id %MoveWindow_Id%
   winget, _MinMaxStatus, MinMax, ahk_id %MoveWindow_Id%
-  if (_MinMaxStatus = 0) {
+  if (_MinMaxStatus = 0)
+  {
     settimer, MoveWindowWatch, 10
   }
 return

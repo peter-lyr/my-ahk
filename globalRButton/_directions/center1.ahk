@@ -1,28 +1,28 @@
 Center1_RButtonUp(show, action="松开右键: ")
 {
-  return 1
+  return 0
 }
 
 Center1_RButtonLButtonDown(show, action="按下左键: ")
 {
-  TestPre(show, action)
-  return 1
+  CopyTextPre(show, action)
+  return 0
 }
 
 Center1_RButtonLButtonUp(show, action="抬起左键: ")
 {
-  TestDo(show, action)
-  return 1
+  CopyTextDo(show, action)
+  return 0
 }
 
 Center1_RButtonMButtonDown(show, action="按下中键: ")
 {
-  return 1
+  return 0
 }
 
 Center1_RButtonMButtonUp(show, action="抬起中键: ")
 {
-  return 1
+  return 0
 }
 
 Center1_RButtonWheelDown(show, action="向下滚轮: ")

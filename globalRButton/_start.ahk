@@ -11,9 +11,11 @@ InitGlobalRButton:
   MarkFlagRButtonWheel := 0
   MarkFlagRButtonWheelDown := 0
   MarkFlagRButtonWheelUp := 0
+  TextCopied := 0
 return
 
-SelectedWindow(SelectedWindow_Id) {
+SelectedWindow(SelectedWindow_Id)
+{
   global SelectedWindow_Title
   global SelectedWindow_ProcessName
   wingettitle, SelectedWindow_Title, ahk_id %SelectedWindow_Id%
@@ -23,6 +25,11 @@ SelectedWindow(SelectedWindow_Id) {
 }
 
 GlobalRButtonStart:
+  getkeystate, RButtonSta, RButton, P
+  if (RButtonSta == "U")
+  {
+    return
+  }
   gosub InitGlobalRButton
   gosub DrawCircle
   gosub CntGlobalRButton
