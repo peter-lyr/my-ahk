@@ -7,6 +7,8 @@ RButtonPressCntMax := 5
 
 Direction := ""
 
+TextCopied:=Short(clipboard)
+
 gosub InitCircle
 
 #Include %A_ScriptDir%\globalRButton\_hotkey.ahk
@@ -25,6 +27,7 @@ gosub InitCircle
 #Include %A_ScriptDir%\globalRButton\_directions\center1.ahk
 #Include %A_ScriptDir%\globalRButton\labels\shiftWheel.ahk
 #Include %A_ScriptDir%\globalRButton\labels\copy.ahk
+#Include %A_ScriptDir%\globalRButton\labels\paste.ahk
 
 #if RButtonEnable
 RButton::gosub _RButton

@@ -11,7 +11,6 @@ InitGlobalRButton:
   MarkFlagRButtonWheel := 0
   MarkFlagRButtonWheelDown := 0
   MarkFlagRButtonWheelUp := 0
-  TextCopied := 0
 return
 
 SelectedWindow(SelectedWindow_Id)

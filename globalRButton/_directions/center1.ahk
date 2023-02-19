@@ -5,23 +5,25 @@ Center1_RButtonUp(show, action="松开右键: ")
 
 Center1_RButtonLButtonDown(show, action="按下左键: ")
 {
-  CopyTextPre(show, action)
+  CopyPre(show, action)
   return 0
 }
 
 Center1_RButtonLButtonUp(show, action="抬起左键: ")
 {
-  CopyTextDo(show, action)
+  CopyDo(show, action)
   return 0
 }
 
 Center1_RButtonMButtonDown(show, action="按下中键: ")
 {
+  PastePre(show, action)
   return 0
 }
 
 Center1_RButtonMButtonUp(show, action="抬起中键: ")
 {
+  PasteDo(show, action)
   return 0
 }
 

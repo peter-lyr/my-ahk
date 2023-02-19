@@ -1,33 +1,39 @@
-CopyTextWatcher:
+Short(text, len=10)
+{
+  text := trim(text, " `t`r`n")
+  text := strreplace(text, A_Space)
+  text := strreplace(text, "`r`n")
+  text := strreplace(text, "`t")
+  new := text
+  if (strlen(text) > 2 * len)
+  {
+    new := substr(text, 1, len)
+    new .= "..."
+    new .= substr(text, -len)
+  }
+  return new
+}
+
+CopyWatcher:
   _Clipboard=%clipboard%
   if (_Clipboard != "") {
-    settimer, CopyTextWatcher, Off
-    clipboard=%clipboard%
-    TextCopied := ""
+    settimer, CopyWatcher, Off
     if (SelectedWindow_IsExplorer() == 1) {
-      TextCopied .= _Clipboard
+      TextCopied := _Clipboard
     } else
     {
-      if (strlen(_Clipboard) > 10)
-      {
-        TextCopied .= substr(_Clipboard, 1, 5)
-        TextCopied .= "..."
-        TextCopied .= substr(rtrim(_Clipboard, " `t`r`n"), -5)
-      } else
-      {
-        TextCopied .= _Clipboard
-      }
+      TextCopied := Short(_Clipboard)
     }
   }
 return
 
-CopyText:
+Copy:
   send {Ctrl Down}c
   send {Ctrl Up}
-  settimer, CopyTextWatcher, 10
+  settimer, CopyWatcher, 10
 return
 
-CopyTextPre(show, action)
+CopyPre(show, action)
 {
   global TextCopied
   if (show == 0)
@@ -36,21 +42,15 @@ CopyTextPre(show, action)
   {
     _Msg := action
     _Msg .= "尝试复制"
-    if (TextCopied != 0)
-    {
-      _Msg .= "("
-      _Msg .= TextCopied
-      _Msg .= ")"
-    }
     PushMsg(_Msg)
   }
 }
 
-CopyTextDo(show, action)
+CopyDo(show, action)
 {
   if (show == 0)
   {
-    gosub CopyText
+    gosub Copy
   } else
   {
     _Msg := action
