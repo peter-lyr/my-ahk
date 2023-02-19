@@ -29,16 +29,13 @@ return
 
 CopyTextPre(show, action)
 {
-  global Test_X1
-  global Test_Y1
   global TextCopied
   if (show == 0)
   {
-    mousegetpos, Test_X1, Test_Y1
   } else
   {
     _Msg := action
-    _Msg .= "尝试复制文字"
+    _Msg .= "尝试复制"
     if (TextCopied != 0)
     {
       _Msg .= "("
@@ -51,19 +48,13 @@ CopyTextPre(show, action)
 
 CopyTextDo(show, action)
 {
-  global Test_X1
-  global Test_Y1
-  mousegetpos, Test_X2, Test_Y2
-  if (Test_X1 == Test_X2 and Test_Y1 == Test_Y2)
+  if (show == 0)
   {
-    if (show == 0)
-    {
-      gosub CopyText
-    } else
-    {
-      _Msg := action
-      _Msg .= "复制文字"
-      PushMsg(_Msg)
-    }
+    gosub CopyText
+  } else
+  {
+    _Msg := action
+    _Msg .= "复制"
+    PushMsg(_Msg)
   }
 }
