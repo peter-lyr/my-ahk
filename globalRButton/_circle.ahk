@@ -11,7 +11,7 @@ InitCircle:
   winset, Transparent, 50, ahk_id %GuiHwnd%
   winset, Region, % "0-0 W" CircleSize " H" CircleSize " E", ahk_id %GuiHwnd%
   winset, ExStyle, +0x20, ahk_id %GuiHwnd%
-  gui, show, w200 h200 hide
+  gui, show, w8000 h8000 hide
 return
 
 DrawCircle1S:

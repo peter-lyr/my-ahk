@@ -5,7 +5,6 @@ MoveWindowWatch:
   {
     settimer, MoveWindowWatch, Off
     FlagMoveWindow := 0
-    tooltip
     return
   }
   if (MarkFlagRButtonUp == 1)

@@ -56,7 +56,6 @@ ResizeWindow:
     if (MButtonStatus == "U")
     {
       FlagResizeWindow := 0
-      tooltip
       break
     }
     mousegetpos, _MouseWin_X2, _MouseWin_Y2
