@@ -4,21 +4,23 @@ Short(text, len=10)
   text := strreplace(text, A_Space)
   text := strreplace(text, "`r`n")
   text := strreplace(text, "`t")
-  new := text
+  ret := text
   if (strlen(text) > 2 * len)
   {
-    new := substr(text, 1, len)
-    new .= "..."
-    new .= substr(text, -len)
+    ret := substr(text, 1, len)
+    ret .= "..."
+    ret .= substr(text, -len)
   }
-  return new
+  return ret
 }
 
 CopyWatcher:
   _Clipboard=%clipboard%
-  if (_Clipboard != "") {
+  if (_Clipboard != "")
+  {
     settimer, CopyWatcher, Off
-    if (SelectedWindow_IsExplorer() == 1) {
+    if (SelectedWindow_IsExplorer() == 1)
+    {
       TextCopied := _Clipboard
     } else
     {

@@ -9,10 +9,12 @@ SelectedWindow_IsDesktop()
   }
 }
 
-SelectedWindow_IsExplorer() {
+SelectedWindow_IsExplorer()
+{
   global SelectedWindow_Title
   global SelectedWindow_ProcessName
-  if (RegexMatch(SelectedWindow_ProcessName, "i)explorer\.exe") || RegexMatch(SelectedWindow_Title, "i)Program Manager")) {
+  if (RegexMatch(SelectedWindow_ProcessName, "i)explorer\.exe") || RegexMatch(SelectedWindow_Title, "i)Program Manager"))
+  {
     return 1
   }
   return 0
