@@ -1,11 +1,14 @@
 ResizeWindow:
+  getkeystate, MButtonSta, MButton, P
   coordmode, Mouse, Screen
-  setwindelay, 2
   mousegetpos, _MouseWindow_X1, _MouseWindow_Y1, _MouseWindowId
   winget, _MaxMaxStatus, MinMax, ahk_id %_MouseWindowId%
-  if _MaxMaxStatus {
+  if (_MaxMaxStatus or SelectedWindow_IsDesktop() or LButtonSta == "D") {
+    FlagResizeWindow := 0
     return
   }
+  FlagResizeWindow := 1
+  setwindelay, 2
   wingetpos, _X1, _Y1, _W, _H, ahk_id %_MouseWindowId%
   wingetpos, _XX1, _YY1, _WW, _HH, ahk_id %_MouseWindowId%
   _Y := _H * (_MouseWindow_X1 - _X1) / _W + _Y1
@@ -39,10 +42,12 @@ ResizeWindow:
   Loop {
     if (MarkFlagRButtonUp == 1) {
       winmove, ahk_id %_MouseWindowId%, , _XX1, _YY1, _WW, _HH
+      FlagResizeWindow := 0
       break
     }
     getkeystate, MButtonStatus, MBUTTON, P
     if (MButtonStatus == "U") {
+      FlagResizeWindow := 0
       break
     }
     mousegetpos, _MouseWin_X2, _MouseWin_Y2
