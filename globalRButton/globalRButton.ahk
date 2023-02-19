@@ -17,6 +17,12 @@ gosub InitCircle
 #Include %A_ScriptDir%\globalRButton\_end.ahk
 #Include %A_ScriptDir%\globalRButton\_watcher.ahk
 #Include %A_ScriptDir%\globalRButton\_direction.ahk
+#Include %A_ScriptDir%\globalRButton\_msg.ahk
+#Include %A_ScriptDir%\globalRButton\_rbuttonLM.ahk
+#Include %A_ScriptDir%\globalRButton\_move.ahk
+#Include %A_ScriptDir%\globalRButton\_resize.ahk
+#Include %A_ScriptDir%\globalRButton\_directions\center1.ahk
+#Include %A_ScriptDir%\globalRButton\labels\shiftWheel.ahk
 
 #if RButtonEnable
 RButton::gosub _RButton
@@ -24,9 +30,9 @@ RButton::gosub _RButton
 RButton Up::gosub _RButtonUp
 
 #if RButtonEnable
-~RButton & WheelUp::gosub _RButtonWheelUp
+~RButton & wheelup::gosub _RButtonWheelUp
 #if RButtonEnable
-~RButton & WheelDown::gosub _RButtonWheelDown
+~RButton & wheeldown::gosub _RButtonWheelDown
 
 #if RButtonEnable
 ~RButton & LButton::gosub _RButtonLButton

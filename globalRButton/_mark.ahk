@@ -21,6 +21,7 @@ _MarkRButtonLButton:
   MarkFlagRButtonAll := 1
   MarkFlagRButtonLButton := 1
   MarkFlagRButtonUpCancel := 1
+  MarkFlagRButtonLButtonUp := 0
   MarkFlagRButtonLButtonDown := 1
 return
 
@@ -28,6 +29,7 @@ _MarkRButtonLButtonUp:
   MarkFlagRButtonAll := 1
   MarkFlagRButtonLButton := 1
   MarkFlagRButtonUpCancel := 1
+  MarkFlagRButtonLButtonDown := 0
   MarkFlagRButtonLButtonUp := 1
 return
 
@@ -35,6 +37,7 @@ _MarkRButtonMButton:
   MarkFlagRButtonAll := 1
   MarkFlagRButtonMButton := 1
   MarkFlagRButtonUpCancel := 1
+  MarkFlagRButtonMButtonUp := 0
   MarkFlagRButtonMButtonDown := 1
 return
 
@@ -42,5 +45,6 @@ _MarkRButtonMButtonUp:
   MarkFlagRButtonAll := 1
   MarkFlagRButtonMButton := 1
   MarkFlagRButtonUpCancel := 1
+  MarkFlagRButtonMButtonDown := 0
   MarkFlagRButtonMButtonUp := 1
 return

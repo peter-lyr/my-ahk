@@ -7,7 +7,7 @@ ClickRightWatcher:
     settimer, ClickRightWatcher, Off
     click Right
   }
-Return
+return
 
 GlobalRButtonEnd:
   if (MarkFlagRButtonUpCancel == 0) {

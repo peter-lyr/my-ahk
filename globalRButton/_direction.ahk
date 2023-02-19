@@ -1,5 +1,5 @@
 MouseCursorDirection:
-  MouseGetPos, _x, _y
+  mousegetpos, _x, _y
   _dx := _x - SelectedWindow_X
   _dy := _y - SelectedWindow_Y
   _c  := sqrt(_dx ** 2 + _dy ** 2)
