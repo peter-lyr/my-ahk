@@ -17,7 +17,10 @@ return
 
 _RButtonLButton:
   gosub _MarkRButtonLButton
-  gosub MoveWindow
+  if (RButtonPressCnt == 1)
+  {
+    gosub MoveWindow
+  }
 return
 
 _RButtonLButtonUp:
@@ -26,7 +29,10 @@ return
 
 _RButtonMButton:
   gosub _MarkRButtonMButton
-  gosub ResizeWindow
+  if (RButtonPressCnt == 1)
+  {
+    gosub ResizeWindow
+  }
 return
 
 _RButtonMButtonUp:

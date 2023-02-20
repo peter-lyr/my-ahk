@@ -31,8 +31,11 @@ RButtonActions:
       DoRButtonLButtonUp(1)
     }
   }
-  gosub RButtonL
-  gosub RButtonM
+  if (RButtonPressCnt == 1)
+  {
+    gosub RButtonL
+    gosub RButtonM
+  }
   if (MarkFlagRButtonUp == 1)
   {
     if (MarkFlagRButtonUpCancel == 0)
