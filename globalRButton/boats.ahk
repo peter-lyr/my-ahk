@@ -163,6 +163,8 @@ DoRButtonWheelDown(show, action="向下滚轮: ")
       return 0
     case "RightUp":
     case "RightDown":
+      CtrlWinRight(show, action)
+      return 0
     case "LeftDown":
     case "LeftUp":
     case "Up":
@@ -194,6 +196,8 @@ DoRButtonWheelUp(show, action="向上滚轮: ")
       return 0
     case "RightUp":
     case "RightDown":
+      CtrlWinLeft(show, action)
+      return 0
     case "LeftDown":
     case "LeftUp":
     case "Up":
