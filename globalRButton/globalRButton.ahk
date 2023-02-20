@@ -10,6 +10,7 @@ Direction := ""
 TextCopied:=Short(clipboard)
 
 gosub InitCircle
+settimer, MstscWatcher, 10
 
 #Include %A_ScriptDir%\globalRButton\_hotkey.ahk
 #Include %A_ScriptDir%\globalRButton\_circle.ahk
@@ -23,6 +24,7 @@ gosub InitCircle
 #Include %A_ScriptDir%\globalRButton\_move.ahk
 #Include %A_ScriptDir%\globalRButton\_resize.ahk
 #Include %A_ScriptDir%\globalRButton\_is.ahk
+#Include %A_ScriptDir%\globalRButton\_mstsc.ahk
 #Include %A_ScriptDir%\globalRButton\watcher.ahk
 #Include %A_ScriptDir%\globalRButton\boats.ahk
 #Include %A_ScriptDir%\globalRButton\labels\shiftWheel.ahk
