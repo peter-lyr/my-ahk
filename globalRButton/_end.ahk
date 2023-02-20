@@ -15,6 +15,7 @@ GlobalRButtonEnd:
   {
     settimer, ClickRightWatcher, 10
   }
+  gosub CntGlobalRButtonEnd
   gosub HideCircle
   settimer, RemoveTooltip, -2200
 return
