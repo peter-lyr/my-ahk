@@ -24,7 +24,7 @@ gosub InitCircle
 #Include %A_ScriptDir%\globalRButton\_move.ahk
 #Include %A_ScriptDir%\globalRButton\_resize.ahk
 #Include %A_ScriptDir%\globalRButton\_is.ahk
-#Include %A_ScriptDir%\globalRButton\_directions\center1.ahk
+#Include %A_ScriptDir%\globalRButton\boats.ahk
 #Include %A_ScriptDir%\globalRButton\labels\shiftWheel.ahk
 #Include %A_ScriptDir%\globalRButton\labels\copy.ahk
 #Include %A_ScriptDir%\globalRButton\labels\paste.ahk

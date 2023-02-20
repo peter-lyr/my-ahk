@@ -1,36 +1,112 @@
-Boat:
-  ; tooltip Direction: %Direction%`nRButtonPressCnt: %RButtonPressCnt%`nRButtonTimerCnt: %RButtonTimerCnt%`nMarkFlagRButtonAll: %MarkFlagRButtonAll%`nMarkFlagRButtonLButton: %MarkFlagRButtonLButton%`nMarkFlagRButtonLButtonDown: %MarkFlagRButtonLButtonDown%`nMarkFlagRButtonLButtonUp: %MarkFlagRButtonLButtonUp%`nMarkFlagRButtonMButton: %MarkFlagRButtonMButton%`nMarkFlagRButtonMButtonDown: %MarkFlagRButtonMButtonDown%`nMarkFlagRButtonMButtonUp: %MarkFlagRButtonMButtonUp%`nMarkFlagRButtonUp: %MarkFlagRButtonUp%`nMarkFlagRButtonUpCancel: %MarkFlagRButtonUpCancel%`nMarkFlagRButtonWheel: %MarkFlagRButtonWheel%`nMarkFlagRButtonWheelDown: %MarkFlagRButtonWheelDown%`nMarkFlagRButtonWheelUp: %MarkFlagRButtonWheelUp%`n
-  switch RButtonPressCnt {
-  case 1:
-    switch Direction {
-    case "Center":
-      gosub Center1
-    case "RightUp":
-      ; gosub RightUp1
-    case "RightDown":
-      ; gosub RightDown1
-    case "LeftDown":
-      ; gosub LeftDown1
-    case "LeftUp":
-      ; gosub LeftUp1
-    case "Up":
-      ; gosub Up1
-    case "Right":
-      ; gosub Right1
-    case "Down":
-      ; gosub Down1
-    case "Left":
-      ; gosub Left1
-    }
-  case 2:
-    tooltip 2
-  case 3:
-    tooltip 3
-  case 4:
-    tooltip 4
-  case 5:
-    tooltip 5
+RButtonActions:
+  getkeystate, LButtonSta, LButton, P
+  getkeystate, MButtonSta, MButton, P
+  msg := ""
+  if (MarkFlagRButtonUpCancel == 0)
+  {
+    DoRButtonUp(1)
   }
+  if (LButtonSta == "U" and MButtonSta == "U")
+  {
+    DoRButtonWheelDown(1)
+    DoRButtonWheelUp(1)
+  }
+  if (LButtonSta == "U")
+  {
+    if (MButtonSta == "U")
+    {
+      DoRButtonMButtonDown(1)
+    } else
+    {
+      DoRButtonMButtonUp(1)
+    }
+  }
+  if (MButtonSta == "U")
+  {
+    if (LButtonSta == "U")
+    {
+      DoRButtonLButtonDown(1)
+    } else
+    {
+      DoRButtonLButtonUp(1)
+    }
+  }
+  gosub RButtonL
+  gosub RButtonM
+  if (MarkFlagRButtonUp == 1)
+  {
+    if (MarkFlagRButtonUpCancel == 0)
+    {
+      if (DoRButtonUp(0))
+      {
+        msg := ""
+      }
+    } else if (MarkFlagRButtonWheel == 1)
+    {
+      msg := ""
+    }
+  } else if (MarkFlagRButtonLButtonDown == 1)
+  {
+    MarkFlagRButtonLButtonDown := 0
+    if (MButtonSta == "U")
+    {
+      if (DoRButtonLButtonDown(0))
+      {
+        msg := ""
+      }
+    }
+  } else if (MarkFlagRButtonLButtonUp == 1)
+  {
+    MarkFlagRButtonLButtonUp := 0
+    if (MButtonSta == "U")
+    {
+      if (DoRButtonLButtonUp(0))
+      {
+        msg := ""
+      }
+    }
+  } else if (MarkFlagRButtonMButtonDown == 1)
+  {
+    MarkFlagRButtonMButtonDown := 0
+    if (LButtonSta == "U")
+    {
+      if (DoRButtonMButtonDown(0))
+      {
+        msg := ""
+      }
+    }
+  } else if (MarkFlagRButtonMButtonUp == 1)
+  {
+    MarkFlagRButtonMButtonUp := 0
+    if (LButtonSta == "U")
+    {
+      if (DoRButtonMButtonUp(0))
+      {
+        msg := ""
+      }
+    }
+  } else if (MarkFlagRButtonWheelDown == 1)
+  {
+    MarkFlagRButtonWheelDown := 0
+    if (LButtonSta == "U" and MButtonSta == "U")
+    {
+      if (DoRButtonWheelDown(0))
+      {
+        msg := ""
+      }
+    }
+  } else if (MarkFlagRButtonWheelUp == 1)
+  {
+    MarkFlagRButtonWheelUp := 0
+    if (LButtonSta == "U" and MButtonSta == "U")
+    {
+      if (DoRButtonWheelUp(0))
+      {
+        msg := ""
+      }
+    }
+  }
+  tooltip %msg%
 return
 
 RButtonWatcher:
@@ -40,5 +116,5 @@ RButtonWatcher:
     settimer, RButtonWatcher, off
   }
   gosub MouseCursorDirection
-  gosub Boat
+  gosub RButtonActions
 return
