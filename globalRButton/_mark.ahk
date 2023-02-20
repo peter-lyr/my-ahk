@@ -1,50 +1,50 @@
 _MarkRButtonUp:
-  MarkFlagRButtonAll := 1
-  MarkFlagRButtonUp := 1
+  MarkFlagRButton |= (1 << 0)
+  MarkFlagRButton |= (1 << 7)
 return
 
 _MarkRButtonWheelUp:
-  MarkFlagRButtonAll := 1
-  MarkFlagRButtonWheel := 1
-  MarkFlagRButtonUpCancel := 1
-  MarkFlagRButtonWheelUp := 1
+  MarkFlagRButton |= (1 << 0)
+  MarkFlagRButton |= (1 << 9)
+  MarkFlagRButton |= (1 << 8)
+  MarkFlagRButton |= (1 << 11)
 return
 
 _MarkRButtonWheelDown:
-  MarkFlagRButtonAll := 1
-  MarkFlagRButtonWheel := 1
-  MarkFlagRButtonUpCancel := 1
-  MarkFlagRButtonWheelDown := 1
+  MarkFlagRButton |= (1 << 0)
+  MarkFlagRButton |= (1 << 9)
+  MarkFlagRButton |= (1 << 8)
+  MarkFlagRButton |= (1 << 10)
 return
 
 _MarkRButtonLButton:
-  MarkFlagRButtonAll := 1
-  MarkFlagRButtonLButton := 1
-  MarkFlagRButtonUpCancel := 1
-  MarkFlagRButtonLButtonUp := 0
-  MarkFlagRButtonLButtonDown := 1
+  MarkFlagRButton |= (1 << 0)
+  MarkFlagRButton |= (1 << 1)
+  MarkFlagRButton |= (1 << 8)
+  MarkFlagRButton &= ~(1 << 3)
+  MarkFlagRButton |= (1 << 2)
 return
 
 _MarkRButtonLButtonUp:
-  MarkFlagRButtonAll := 1
-  MarkFlagRButtonLButton := 1
-  MarkFlagRButtonUpCancel := 1
-  MarkFlagRButtonLButtonDown := 0
-  MarkFlagRButtonLButtonUp := 1
+  MarkFlagRButton |= (1 << 0)
+  MarkFlagRButton |= (1 << 1)
+  MarkFlagRButton |= (1 << 8)
+  MarkFlagRButton &= ~(1 << 2)
+  MarkFlagRButton |= (1 << 3)
 return
 
 _MarkRButtonMButton:
-  MarkFlagRButtonAll := 1
-  MarkFlagRButtonMButton := 1
-  MarkFlagRButtonUpCancel := 1
-  MarkFlagRButtonMButtonUp := 0
-  MarkFlagRButtonMButtonDown := 1
+  MarkFlagRButton |= (1 << 0)
+  MarkFlagRButton |= (1 << 4)
+  MarkFlagRButton |= (1 << 8)
+  MarkFlagRButton &= ~(1 << 6)
+  MarkFlagRButton |= (1 << 5)
 return
 
 _MarkRButtonMButtonUp:
-  MarkFlagRButtonAll := 1
-  MarkFlagRButtonMButton := 1
-  MarkFlagRButtonUpCancel := 1
-  MarkFlagRButtonMButtonDown := 0
-  MarkFlagRButtonMButtonUp := 1
+  MarkFlagRButton |= (1 << 0)
+  MarkFlagRButton |= (1 << 4)
+  MarkFlagRButton |= (1 << 8)
+  MarkFlagRButton &= ~(1 << 5)
+  MarkFlagRButton |= (1 << 6)
 return

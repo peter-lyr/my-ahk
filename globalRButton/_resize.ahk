@@ -45,7 +45,7 @@ ResizeWindow:
     __Dy := 0
   }
   Loop {
-    if (MarkFlagRButtonUp == 1)
+    if (((MarkFlagRButton & (1 << 7)) >> 7) == 1)
     {
       winmove, ahk_id %_MouseWindowId%, , _XX1, _YY1, _WW, _HH
       FlagResizeWindow := 0

@@ -11,7 +11,7 @@ ClickRightWatcher:
 return
 
 GlobalRButtonEnd:
-  if (MarkFlagRButtonUpCancel == 0)
+  if (((MarkFlagRButton & (1 << 8)) >> 8) == 0)
   {
     settimer, ClickRightWatcher, 10
   }
