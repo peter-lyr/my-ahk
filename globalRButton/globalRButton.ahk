@@ -17,13 +17,13 @@ gosub InitCircle
 #Include %A_ScriptDir%\globalRButton\_mark.ahk
 #Include %A_ScriptDir%\globalRButton\_start.ahk
 #Include %A_ScriptDir%\globalRButton\_end.ahk
-#Include %A_ScriptDir%\globalRButton\_watcher.ahk
 #Include %A_ScriptDir%\globalRButton\_direction.ahk
 #Include %A_ScriptDir%\globalRButton\_msg.ahk
 #Include %A_ScriptDir%\globalRButton\_rbuttonLM.ahk
 #Include %A_ScriptDir%\globalRButton\_move.ahk
 #Include %A_ScriptDir%\globalRButton\_resize.ahk
 #Include %A_ScriptDir%\globalRButton\_is.ahk
+#Include %A_ScriptDir%\globalRButton\watcher.ahk
 #Include %A_ScriptDir%\globalRButton\boats.ahk
 #Include %A_ScriptDir%\globalRButton\labels\shiftWheel.ahk
 #Include %A_ScriptDir%\globalRButton\labels\copy.ahk
