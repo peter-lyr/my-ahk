@@ -8,7 +8,7 @@ RButtonTimerDo:
 return
 
 RButtonTimer:
-  settimer, RButtonTimerDo, 230
+  settimer, RButtonTimerDo, 10
   RButtonPressFlag := 1
 return
 

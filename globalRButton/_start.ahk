@@ -25,6 +25,7 @@ SelectedWindow(SelectedWindow_Id)
 }
 
 GlobalRButtonStart:
+  settimer, ClickRightWatcher, off
   getkeystate, RButtonSta, RButton, P
   if (RButtonSta == "U")
   {
