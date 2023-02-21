@@ -1,32 +1,18 @@
-RButtonTimer:
-  RButtonTimerCnt += 1
-  if (RButtonTimerCnt > RButtonTimerOut)
+RButtonTimerDo:
+  getkeystate, RButtonSta, RButton, P
+  if (RButtonSta == "U")
   {
-    settimer, RButtonTimer, off
-    return
+    RButtonPressCnt := 0
+    settimer, RButtonTimerDo, off
   }
+return
+
+RButtonTimer:
+  settimer, RButtonTimerDo, 230
 return
 
 CntGlobalRButton:
-  if (RButtonTimerCnt < RButtonTimerOut)
-  {
-    RButtonPressCnt += 1
-    if (RButtonPressCnt > RButtonPressCntMax)
-    {
-      RButtonPressCnt := RButtonPressCntMax
-    }
-  } else {
-    RButtonPressCnt := 1
-  }
-  RButtonTimerCnt := 0
-  settimer, RButtonTimer, 10
-return
-
-CntGlobalRButtonEnd:
   settimer, RButtonTimer, off
-  if (RButtonTimerCnt < RButtonTimerOut)
-  {
-    RButtonTimerCnt := 0
-    settimer, RButtonTimer, 10
-  }
+  RButtonPressCnt += 1
+  settimer, RButtonTimer, -230
 return
