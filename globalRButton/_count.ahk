@@ -9,6 +9,7 @@ return
 
 RButtonTimer:
   settimer, RButtonTimerDo, 230
+  RButtonPressFlag := 1
 return
 
 CntGlobalRButton:

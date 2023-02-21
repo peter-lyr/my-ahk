@@ -2,7 +2,7 @@ RButtonActions:
   getkeystate, LButtonSta, LButton, P
   getkeystate, MButtonSta, MButton, P
   msg := ""
-  if (MarkFlagRButtonUpCancel == 0)
+  if (((MarkFlagRButton & (1 << 8)) >> 8) == 0)
   {
     DoRButtonUp(1)
   }
@@ -36,21 +36,21 @@ RButtonActions:
     gosub RButtonL
     gosub RButtonM
   }
-  if (MarkFlagRButtonUp == 1)
+  if (((MarkFlagRButton & (1 << 7)) >> 7) == 1)
   {
-    if (MarkFlagRButtonUpCancel == 0)
+    if (((MarkFlagRButton & (1 << 8)) >> 8) == 0)
     {
       if (DoRButtonUp(0))
       {
         msg := ""
       }
-    } else if (MarkFlagRButtonWheel == 1)
+    } else if (((MarkFlagRButton & (1 << 9)) >> 9) == 1)
     {
       msg := ""
     }
-  } else if (MarkFlagRButtonLButtonDown == 1)
+  } else if (((MarkFlagRButton & (1 << 2)) >> 2) == 1)
   {
-    MarkFlagRButtonLButtonDown := 0
+    MarkFlagRButton &= ~(1 << 2)
     if (MButtonSta == "U")
     {
       if (DoRButtonLButtonDown(0))
@@ -58,9 +58,9 @@ RButtonActions:
         msg := ""
       }
     }
-  } else if (MarkFlagRButtonLButtonUp == 1)
+  } else if (((MarkFlagRButton & (1 << 3)) >> 3) == 1)
   {
-    MarkFlagRButtonLButtonUp := 0
+    MarkFlagRButton &= ~(1 << 3)
     if (MButtonSta == "U")
     {
       if (DoRButtonLButtonUp(0))
@@ -68,9 +68,9 @@ RButtonActions:
         msg := ""
       }
     }
-  } else if (MarkFlagRButtonMButtonDown == 1)
+  } else if (((MarkFlagRButton & (1 << 5)) >> 5) == 1)
   {
-    MarkFlagRButtonMButtonDown := 0
+    MarkFlagRButton &= ~(1 << 5)
     if (LButtonSta == "U")
     {
       if (DoRButtonMButtonDown(0))
@@ -78,9 +78,9 @@ RButtonActions:
         msg := ""
       }
     }
-  } else if (MarkFlagRButtonMButtonUp == 1)
+  } else if (((MarkFlagRButton & (1 << 6)) >> 6) == 1)
   {
-    MarkFlagRButtonMButtonUp := 0
+    MarkFlagRButton &= ~(1 << 6)
     if (LButtonSta == "U")
     {
       if (DoRButtonMButtonUp(0))
@@ -88,9 +88,9 @@ RButtonActions:
         msg := ""
       }
     }
-  } else if (MarkFlagRButtonWheelDown == 1)
+  } else if (((MarkFlagRButton & (1 << 10)) >> 10) == 1)
   {
-    MarkFlagRButtonWheelDown := 0
+    MarkFlagRButton &= ~(1 << 10)
     if (LButtonSta == "U" and MButtonSta == "U")
     {
       if (DoRButtonWheelDown(0))
@@ -98,9 +98,9 @@ RButtonActions:
         msg := ""
       }
     }
-  } else if (MarkFlagRButtonWheelUp == 1)
+  } else if (((MarkFlagRButton & (1 << 11)) >> 11) == 1)
   {
-    MarkFlagRButtonWheelUp := 0
+    MarkFlagRButton &= ~(1 << 11)
     if (LButtonSta == "U" and MButtonSta == "U")
     {
       if (DoRButtonWheelUp(0))

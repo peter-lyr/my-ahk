@@ -7,7 +7,7 @@ MoveWindowWatch:
     FlagMoveWindow := 0
     return
   }
-  if (MarkFlagRButtonUp == 1)
+  if (((MarkFlagRButton & (1 << 7)) >> 7) == 1)
   {
     settimer, MoveWindowWatch, Off
     winmove, ahk_id %MoveWindow_Id%, , %MoveWindow_OriX%, %MoveWindow_OriY%

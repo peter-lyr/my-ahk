@@ -1,16 +1,17 @@
 InitGlobalRButton:
-  MarkFlagRButtonAll := 0
-  MarkFlagRButtonLButton := 0
-  MarkFlagRButtonLButtonDown := 0
-  MarkFlagRButtonLButtonUp := 0
-  MarkFlagRButtonMButton := 0
-  MarkFlagRButtonMButtonDown := 0
-  MarkFlagRButtonMButtonUp := 0
-  MarkFlagRButtonUp := 0
-  MarkFlagRButtonUpCancel := 0
-  MarkFlagRButtonWheel := 0
-  MarkFlagRButtonWheelDown := 0
-  MarkFlagRButtonWheelUp := 0
+  MarkFlagRButton = 0
+  ; MarkFlagRButtonAll ; 0
+  ; MarkFlagRButtonLButton ; 1
+  ; MarkFlagRButtonLButtonDown ; 2
+  ; MarkFlagRButtonLButtonUp ; 3
+  ; MarkFlagRButtonMButton ; 4
+  ; MarkFlagRButtonMButtonDown ; 5
+  ; MarkFlagRButtonMButtonUp ; 6
+  ; MarkFlagRButtonUp ; 7
+  ; MarkFlagRButtonUpCancel ; 8
+  ; MarkFlagRButtonWheel ; 9
+  ; MarkFlagRButtonWheelDown ; 10
+  ; MarkFlagRButtonWheelUp ; 11
 return
 
 SelectedWindow(SelectedWindow_Id)
