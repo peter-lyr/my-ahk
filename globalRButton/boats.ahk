@@ -2,6 +2,7 @@ DoRButtonUp(show, action="松开右键: ")
 {
   global RButtonPressCnt
   global Direction
+  global msg
   switch RButtonPressCnt {
   case 1:
     switch Direction {
@@ -16,21 +17,22 @@ DoRButtonUp(show, action="松开右键: ")
     case "Left":
     }
   case 2:
-    tooltip 2
+    msg := 2
   case 3:
-    tooltip 3
+    msg := 3
   case 4:
-    tooltip 4
+    msg := 4
   case 5:
-    tooltip 5
+    msg := 5
   }
-  return 1
+  return 0
 }
 
 DoRButtonLButtonDown(show, action="按下左键: ")
 {
   global RButtonPressCnt
   global Direction
+  global msg
   switch RButtonPressCnt {
   case 1:
     switch Direction {
@@ -47,21 +49,22 @@ DoRButtonLButtonDown(show, action="按下左键: ")
     case "Left":
     }
   case 2:
-    tooltip 2
+    msg := 2
   case 3:
-    tooltip 3
+    msg := 3
   case 4:
-    tooltip 4
+    msg := 4
   case 5:
-    tooltip 5
+    msg := 5
   }
-  return 1
+  return 0
 }
 
 DoRButtonLButtonUp(show, action="抬起左键: ")
 {
   global RButtonPressCnt
   global Direction
+  global msg
   switch RButtonPressCnt {
   case 1:
     switch Direction {
@@ -78,21 +81,22 @@ DoRButtonLButtonUp(show, action="抬起左键: ")
     case "Left":
     }
   case 2:
-    tooltip 2
+    msg := 2
   case 3:
-    tooltip 3
+    msg := 3
   case 4:
-    tooltip 4
+    msg := 4
   case 5:
-    tooltip 5
+    msg := 5
   }
-  return 1
+  return 0
 }
 
 DoRButtonMButtonDown(show, action="按下中键: ")
 {
   global RButtonPressCnt
   global Direction
+  global msg
   switch RButtonPressCnt {
   case 1:
     switch Direction {
@@ -109,21 +113,22 @@ DoRButtonMButtonDown(show, action="按下中键: ")
     case "Left":
     }
   case 2:
-    tooltip 2
+    msg := 2
   case 3:
-    tooltip 3
+    msg := 3
   case 4:
-    tooltip 4
+    msg := 4
   case 5:
-    tooltip 5
+    msg := 5
   }
-  return 1
+  return 0
 }
 
 DoRButtonMButtonUp(show, action="抬起中键: ")
 {
   global RButtonPressCnt
   global Direction
+  global msg
   switch RButtonPressCnt {
   case 1:
     switch Direction {
@@ -140,21 +145,22 @@ DoRButtonMButtonUp(show, action="抬起中键: ")
     case "Left":
     }
   case 2:
-    tooltip 2
+    msg := 2
   case 3:
-    tooltip 3
+    msg := 3
   case 4:
-    tooltip 4
+    msg := 4
   case 5:
-    tooltip 5
+    msg := 5
   }
-  return 1
+  return 0
 }
 
 DoRButtonWheelDown(show, action="向下滚轮: ")
 {
   global RButtonPressCnt
   global Direction
+  global msg
   switch RButtonPressCnt {
   case 1:
     switch Direction {
@@ -173,21 +179,22 @@ DoRButtonWheelDown(show, action="向下滚轮: ")
     case "Left":
     }
   case 2:
-    tooltip 2
+    msg := 2
   case 3:
-    tooltip 3
+    msg := 3
   case 4:
-    tooltip 4
+    msg := 4
   case 5:
-    tooltip 5
+    msg := 5
   }
-  return 1
+  return 0
 }
 
 DoRButtonWheelUp(show, action="向上滚轮: ")
 {
   global RButtonPressCnt
   global Direction
+  global msg
   switch RButtonPressCnt {
   case 1:
     switch Direction {
@@ -206,13 +213,13 @@ DoRButtonWheelUp(show, action="向上滚轮: ")
     case "Left":
     }
   case 2:
-    tooltip 2
+    msg := 2
   case 3:
-    tooltip 3
+    msg := 3
   case 4:
-    tooltip 4
+    msg := 4
   case 5:
-    tooltip 5
+    msg := 5
   }
-  return 1
+  return 0
 }
