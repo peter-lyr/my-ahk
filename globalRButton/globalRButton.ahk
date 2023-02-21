@@ -1,9 +1,6 @@
 RButtonEnable := 1
 
 RButtonPressCnt := 0
-RButtonTimerOut := 15
-RButtonTimerCnt := RButtonTimerOut
-RButtonPressCntMax := 5
 
 Direction := ""
 

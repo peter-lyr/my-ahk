@@ -3,9 +3,10 @@ RemoveTooltip:
 return
 
 ClickRightWatcher:
-  if (RButtonTimerCnt > RButtonTimerOut)
+  if (RButtonPressFlag == 1)
   {
-    settimer, ClickRightWatcher, Off
+    settimer, ClickRightWatcher, off
+    RButtonPressFlag := 0
     click Right
   }
 return
@@ -15,7 +16,6 @@ GlobalRButtonEnd:
   {
     settimer, ClickRightWatcher, 10
   }
-  gosub CntGlobalRButtonEnd
   gosub HideCircle
   settimer, RemoveTooltip, -2200
 return
