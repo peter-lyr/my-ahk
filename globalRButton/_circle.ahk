@@ -3,7 +3,7 @@ InitCircle:
   iniread, CircleColor, main.ini, Circle, color, red
   iniwrite %CircleSize%, main.ini, Circle, size
   iniwrite %CircleColor%, main.ini, Circle, color
-  coordmode, mouse, screen
+  gosub CoorModeMouseScreen
   gui, -caption +ToolWindow +AlwaysOnTop +LastFound
   gui, color, %CircleColor%
   GuiHwnd := WinExist()

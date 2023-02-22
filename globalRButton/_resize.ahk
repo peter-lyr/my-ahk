@@ -1,6 +1,6 @@
 ResizeWindow:
   getkeystate, MButtonSta, MButton, P
-  coordmode, Mouse, Screen
+  gosub CoorModeMouseScreen
   mousegetpos, _MouseWindow_X1, _MouseWindow_Y1, _MouseWindowId
   winget, _MaxMaxStatus, MinMax, ahk_id %_MouseWindowId%
   if (_MaxMaxStatus or SelectedWindow_IsDesktop() or LButtonSta == "D")
