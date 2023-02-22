@@ -45,15 +45,15 @@ ResizeWindow:
     __Dy := 0
   }
   Loop {
-    if (((MarkFlagRButton & (1 << 7)) >> 7) == 1)
+    getkeystate, MButtonStatus, MBUTTON, P
+    if (((((MarkFlagRButton & (1 << 7)) >> 7) == 1) and (Direction != "Center")) or ((MButtonStatus == "U") and (Direction == "Center")))
     {
       winmove, ahk_id %_MouseWindowId%, , _XX1, _YY1, _WW, _HH
       ResizeWindowAllowed := 0
       tooltip
       break
     }
-    getkeystate, MButtonStatus, MBUTTON, P
-    if (MButtonStatus == "U")
+    if (((MarkFlagRButton & (1 << 7)) >> 7) == 1 or MButtonStatus == "U")
     {
       ResizeWindowAllowed := 0
       break

@@ -1,18 +1,18 @@
 MoveWindowWatch:
   coordmode, Mouse, Screen
   getkeystate, _LButtonStatus, LButton, P
-  if (_LButtonStatus == "U")
-  {
-    settimer, MoveWindowWatch, Off
-    MoveWindowAllowed := 0
-    return
-  }
-  if (((MarkFlagRButton & (1 << 7)) >> 7) == 1)
+  if (((((MarkFlagRButton & (1 << 7)) >> 7) == 1) and (Direction != "Center")) or ((_LButtonStatus == "U") and (Direction == "Center")))
   {
     settimer, MoveWindowWatch, Off
     winmove, ahk_id %MoveWindow_Id%, , %MoveWindow_OriX%, %MoveWindow_OriY%
     MoveWindowAllowed := 0
     tooltip
+    return
+  }
+  if ((MarkFlagRButton & (1 << 7)) >> 7 == 1 or _LButtonStatus == "U")
+  {
+    settimer, MoveWindowWatch, Off
+    MoveWindowAllowed := 0
     return
   }
   mousegetpos, _X2, _Y2
