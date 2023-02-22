@@ -21,13 +21,14 @@ RestoreMaximizeWindow(show, action)
      if (IsDesktop(SelectedWindow_Title) == 0)
      {
       winget, _status, MinMax, ahk_id %SelectedWindow_Id%
+      _Msg := action
       if (_status == 0)
       {
-        _Msg := "最大化窗口："
+        _Msg .= "最大化窗口："
         _Msg .= Trim(SelectedWindow_Title)
       } else
       {
-        _Msg := "恢复窗口："
+        _Msg .= "恢复窗口："
         _Msg .= Trim(SelectedWindow_Title)
       }
       PushMsg(_Msg)

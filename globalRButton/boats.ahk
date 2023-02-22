@@ -20,6 +20,15 @@ DoRButtonUp(show, action="松开右键: ")
     case "LeftDown":
     case "LeftUp":
     case "Up":
+    {
+      switch Mode
+      {
+        case 1:
+        {
+          return TopMostToggle(show, action)
+        }
+      }
+    }
     case "Right":
     {
       switch Mode
