@@ -14,10 +14,6 @@ DoRButtonUp(show, action="松开右键: ")
     case "Right":
     case "Down":
     case "Left":
-      switch Mode
-      {
-        case 1:
-      }
   }
   return 0
 }
@@ -33,6 +29,16 @@ DoRButtonLButtonDown(show, action="按下左键: ")
     {
       CountUpPre(show, action)
     }
+    case "Up":
+    {
+      switch Mode
+      {
+        case 2:
+        {
+          CopyPre(show, action)
+        }
+      }
+    }
   }
   return 0
 }
@@ -47,6 +53,16 @@ DoRButtonLButtonUp(show, action="抬起左键: ")
     case "Center":
     {
       CountUpDo(show, action)
+    }
+    case "Up":
+    {
+      switch Mode
+      {
+        case 2:
+        {
+          CopyDo(show, action)
+        }
+      }
     }
   }
   if (show == 0)
@@ -67,6 +83,16 @@ DoRButtonMButtonDown(show, action="按下中键: ")
     {
       CountDownPre(show, action)
     }
+    case "Up":
+    {
+      switch Mode
+      {
+        case 2:
+        {
+          PastePre(show, action)
+        }
+      }
+    }
   }
   return 0
 }
@@ -81,6 +107,16 @@ DoRButtonMButtonUp(show, action="抬起中键: ")
     case "Center":
     {
       CountDownDo(show, action)
+    }
+    case "Up":
+    {
+      switch Mode
+      {
+        case 2:
+        {
+          PasteDo(show, action)
+        }
+      }
     }
   }
   if (show == 0)
@@ -97,11 +133,14 @@ DoRButtonWheelDown(show, action="向下滚轮: ")
   global msg
   switch Direction
   {
-    case "Center":
+    case "RightDown":
     {
       switch Mode
       {
         case 1:
+        {
+          CtrlWinRight(show, action)
+        }
       }
     }
   }
@@ -115,11 +154,14 @@ DoRButtonWheelUp(show, action="向上滚轮: ")
   global msg
   switch Direction
   {
-    case "Center":
+    case "RightDown":
     {
       switch Mode
       {
         case 1:
+        {
+          CtrlWinLeft(show, action)
+        }
       }
     }
   }
