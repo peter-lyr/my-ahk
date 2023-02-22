@@ -37,13 +37,13 @@ DoRButtonLButtonDown(show, action="按下左键: ")
   case 1:
     switch Direction {
     case "Center":
-      CopyPre(show, action)
-      return 0
     case "RightUp":
     case "RightDown":
     case "LeftDown":
     case "LeftUp":
     case "Up":
+      CopyPre(show, action)
+      return 0
     case "Right":
     case "Down":
     case "Left":
@@ -69,13 +69,13 @@ DoRButtonLButtonUp(show, action="抬起左键: ")
   case 1:
     switch Direction {
     case "Center":
-      CopyDo(show, action)
-      return 0
     case "RightUp":
     case "RightDown":
     case "LeftDown":
     case "LeftUp":
     case "Up":
+      CopyDo(show, action)
+      return 0
     case "Right":
     case "Down":
     case "Left":
@@ -101,13 +101,13 @@ DoRButtonMButtonDown(show, action="按下中键: ")
   case 1:
     switch Direction {
     case "Center":
-      PastePre(show, action)
-      return 0
     case "RightUp":
     case "RightDown":
     case "LeftDown":
     case "LeftUp":
     case "Up":
+      PastePre(show, action)
+      return 0
     case "Right":
     case "Down":
     case "Left":
@@ -133,13 +133,13 @@ DoRButtonMButtonUp(show, action="抬起中键: ")
   case 1:
     switch Direction {
     case "Center":
-      PasteDo(show, action)
-      return 0
     case "RightUp":
     case "RightDown":
     case "LeftDown":
     case "LeftUp":
     case "Up":
+      PasteDo(show, action)
+      return 0
     case "Right":
     case "Down":
     case "Left":
