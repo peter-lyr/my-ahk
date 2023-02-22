@@ -20,12 +20,19 @@ CountUpPre(show, action)
 CountUpDo(show, action)
 {
   global Mode
+  global ModeMax
   global CountUpAllowed
   if (CountUpAllowed)
   {
     if (show == 0)
     {
-      Mode += 1
+      if (Mode < ModeMax)
+      {
+        Mode += 1
+      } else
+      {
+        Mode := 1
+      }
     } else
     {
       _Msg := action
@@ -57,12 +64,19 @@ CountDownPre(show, action)
 CountDownDo(show, action)
 {
   global Mode
+  global ModeMax
   global CountDownAllowed
   if (CountDownAllowed)
   {
     if (show == 0)
     {
-      Mode -= 1
+      if (Mode > 1)
+      {
+        Mode -= 1
+      } else
+      {
+        Mode := ModeMax
+      }
     } else
     {
       _Msg := action

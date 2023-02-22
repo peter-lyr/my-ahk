@@ -1,6 +1,7 @@
 RButtonEnable := 1
 
 Mode := 0
+ModeMax := 5
 
 Direction := ""
 
