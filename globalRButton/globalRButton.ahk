@@ -32,6 +32,7 @@ settimer, MstscWatcher, 10
 #Include %A_ScriptDir%\globalRButton\labels\altTab.ahk
 #Include %A_ScriptDir%\globalRButton\labels\restoreMaximizeWindow.ahk
 #Include %A_ScriptDir%\globalRButton\labels\topMost.ahk
+#Include %A_ScriptDir%\globalRButton\labels\ctrlAltTab.ahk
 
 #if RButtonEnable
 RButton::gosub _RButton
