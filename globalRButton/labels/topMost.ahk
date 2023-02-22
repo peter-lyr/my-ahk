@@ -12,14 +12,16 @@ TopMostToggle(show, action)
         Winset, AlwaysOnTop, Off, ahk_id %SelectedWindow_Id%
         _Msg := "已取消置顶"
         _Msg .= SelectedWindow_Title
-      } else {
+      } else
+      {
         Winset, AlwaysOnTop, On, ahk_id %SelectedWindow_Id%
         _Msg := "已置顶"
         _Msg .= SelectedWindow_Title
       }
       PushMsg(_Msg)
     }
-  } else {
+  } else
+  {
     if (IsDesktop(SelectedWindow_Title) == 0)
     {
       WinGet, Status, ExStyle, ahk_id %SelectedWindow_Id%
@@ -28,11 +30,13 @@ TopMostToggle(show, action)
       {
         _Msg .= "取消置顶: "
         _Msg .= SelectedWindow_Title
-      } else {
+      } else
+      {
         _Msg .= "置顶: "
         _Msg .= SelectedWindow_Title
       }
-    } else {
+    } else
+    {
       _Msg := "无法置顶桌面"
     }
     PushMsg(_Msg)
