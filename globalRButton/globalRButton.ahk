@@ -1,6 +1,6 @@
 RButtonEnable := 1
 
-RButtonPressCnt := 0
+Mode := 0
 
 Direction := ""
 

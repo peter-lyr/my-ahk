@@ -4,7 +4,7 @@ return
 
 CountUpPre(show, action)
 {
-  global RButtonPressCnt
+  global Mode
   global CountUpAllowed
   if (show == 0)
   {
@@ -19,13 +19,13 @@ CountUpPre(show, action)
 
 CountUpDo(show, action)
 {
-  global RButtonPressCnt
+  global Mode
   global CountUpAllowed
   if (CountUpAllowed)
   {
     if (show == 0)
     {
-      RButtonPressCnt += 1
+      Mode += 1
     } else
     {
       _Msg := action
@@ -41,7 +41,7 @@ return
 
 CountDownPre(show, action)
 {
-  global RButtonPressCnt
+  global Mode
   global CountDownAllowed
   if (show == 0)
   {
@@ -56,13 +56,13 @@ CountDownPre(show, action)
 
 CountDownDo(show, action)
 {
-  global RButtonPressCnt
+  global Mode
   global CountDownAllowed
   if (CountDownAllowed)
   {
     if (show == 0)
     {
-      RButtonPressCnt -= 1
+      Mode -= 1
     } else
     {
       _Msg := action

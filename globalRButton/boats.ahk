@@ -1,6 +1,6 @@
 DoRButtonUp(show, action="松开右键: ")
 {
-  global RButtonPressCnt
+  global Mode
   global Direction
   global msg
   switch Direction
@@ -14,7 +14,7 @@ DoRButtonUp(show, action="松开右键: ")
     case "Right":
     case "Down":
     case "Left":
-      switch RButtonPressCnt
+      switch Mode
       {
         case 1:
       }
@@ -24,7 +24,7 @@ DoRButtonUp(show, action="松开右键: ")
 
 DoRButtonLButtonDown(show, action="按下左键: ")
 {
-  global RButtonPressCnt
+  global Mode
   global Direction
   global msg
   switch Direction
@@ -39,7 +39,7 @@ DoRButtonLButtonDown(show, action="按下左键: ")
 
 DoRButtonLButtonUp(show, action="抬起左键: ")
 {
-  global RButtonPressCnt
+  global Mode
   global Direction
   global msg
   switch Direction
@@ -58,7 +58,7 @@ DoRButtonLButtonUp(show, action="抬起左键: ")
 
 DoRButtonMButtonDown(show, action="按下中键: ")
 {
-  global RButtonPressCnt
+  global Mode
   global Direction
   global msg
   switch Direction
@@ -73,7 +73,7 @@ DoRButtonMButtonDown(show, action="按下中键: ")
 
 DoRButtonMButtonUp(show, action="抬起中键: ")
 {
-  global RButtonPressCnt
+  global Mode
   global Direction
   global msg
   switch Direction
@@ -92,14 +92,14 @@ DoRButtonMButtonUp(show, action="抬起中键: ")
 
 DoRButtonWheelDown(show, action="向下滚轮: ")
 {
-  global RButtonPressCnt
+  global Mode
   global Direction
   global msg
   switch Direction
   {
     case "Center":
     {
-      switch RButtonPressCnt
+      switch Mode
       {
         case 1:
       }
@@ -110,14 +110,14 @@ DoRButtonWheelDown(show, action="向下滚轮: ")
 
 DoRButtonWheelUp(show, action="向上滚轮: ")
 {
-  global RButtonPressCnt
+  global Mode
   global Direction
   global msg
   switch Direction
   {
     case "Center":
     {
-      switch RButtonPressCnt
+      switch Mode
       {
         case 1:
       }
