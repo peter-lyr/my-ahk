@@ -17,7 +17,7 @@ MoveWindowWatch:
   }
   mousegetpos, _X2, _Y2
   wingetpos, _X, _Y, , , ahk_id %MoveWindow_Id%
-  setwindelay, -1
+  setwindelay, 0
   winmove, ahk_id %MoveWindow_Id%, , _X + _X2 - _X1, _Y + _Y2 - _Y1
   _X1 := _X2
   _Y1 := _Y2

@@ -14,7 +14,7 @@ ResizeWindow:
     ResizeWindowCenterRestoreAllowed := 0
   }
   ResizeWindowAllowed := 1
-  setwindelay, 2
+  setwindelay, 0
   wingetpos, _X1, _Y1, _W, _H, ahk_id %_MouseWindowId%
   wingetpos, _XX1, _YY1, _WW, _HH, ahk_id %_MouseWindowId%
   _Y := _H * (_MouseWindow_X1 - _X1) / _W + _Y1
