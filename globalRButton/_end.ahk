@@ -3,7 +3,7 @@ RemoveTooltip:
 return
 
 GlobalRButtonEnd:
-  if (((MarkFlagRButton & (1 << 8)) >> 8) == 0 and Direction == "Center")
+  if (((MarkFlagRButton & (1 << 8)) >> 8) == 0 and Direction == "Center" and Mode == 1)
   {
     click Right
   }

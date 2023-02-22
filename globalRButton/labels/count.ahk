@@ -22,6 +22,7 @@ CountUpDo(show, action)
   global Mode
   global ModeMax
   global CountUpAllowed
+  global MarkFlagRButton
   if (CountUpAllowed)
   {
     if (show == 0)
@@ -33,6 +34,7 @@ CountUpDo(show, action)
       {
         Mode := 1
       }
+      MarkFlagRButton &= ~(1 << 8)
     } else
     {
       _Msg := action
@@ -40,6 +42,7 @@ CountUpDo(show, action)
       PushMsg(_Msg)
     }
   }
+  return 0
 }
 
 CountDownNotAllow:
@@ -66,6 +69,7 @@ CountDownDo(show, action)
   global Mode
   global ModeMax
   global CountDownAllowed
+  global MarkFlagRButton
   if (CountDownAllowed)
   {
     if (show == 0)
@@ -77,6 +81,7 @@ CountDownDo(show, action)
       {
         Mode := ModeMax
       }
+      MarkFlagRButton &= ~(1 << 8)
     } else
     {
       _Msg := action
@@ -84,4 +89,5 @@ CountDownDo(show, action)
       PushMsg(_Msg)
     }
   }
+  return 0
 }

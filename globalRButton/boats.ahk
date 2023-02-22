@@ -6,6 +6,15 @@ DoRButtonUp(show, action="松开右键: ")
   switch Direction
   {
     case "Center":
+    {
+      switch Mode
+      {
+        case 2:
+        {
+          return ActivateWindow(show, action)
+        }
+      }
+    }
     case "RightUp":
     {
       switch Mode
