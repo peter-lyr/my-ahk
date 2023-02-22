@@ -26,6 +26,15 @@ DoRButtonUp(show, action="松开右键: ")
       }
     }
     case "RightDown":
+    {
+      switch Mode
+      {
+        case 1:
+        {
+          return MinimizeWindow(show, action)
+        }
+      }
+    }
     case "LeftDown":
     case "LeftUp":
     case "Up":
