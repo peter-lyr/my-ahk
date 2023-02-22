@@ -1,5 +1,7 @@
-CtrlWinRight(show, action) {
-  if (show == 0) {
+CtrlWinRight(show, action)
+{
+  if (show == 0)
+  {
     Send, {Ctrl Down}{LWin Down}{Right}
     Send, {Ctrl Up}
     Send, {LWin Up}
@@ -10,8 +12,10 @@ CtrlWinRight(show, action) {
   }
 }
 
-CtrlWinLeft(show, action) {
-  if (show == 0) {
+CtrlWinLeft(show, action)
+{
+  if (show == 0)
+  {
     Send, {Ctrl Down}{LWin Down}{Left}
     Send, {Ctrl Up}
     Send, {LWin Up}
