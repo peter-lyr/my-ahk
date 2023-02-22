@@ -3,7 +3,8 @@ ResizeWindow:
   coordmode, Mouse, Screen
   mousegetpos, _MouseWindow_X1, _MouseWindow_Y1, _MouseWindowId
   winget, _MaxMaxStatus, MinMax, ahk_id %_MouseWindowId%
-  if (_MaxMaxStatus or SelectedWindow_IsDesktop() or LButtonSta == "D")
+  wingettitle, _MouseWindow_Title, ahk_id %_MouseWindowId%
+  if (_MaxMaxStatus or IsDesktop(_MouseWindow_Title) or LButtonSta == "D")
   {
     ResizeWindowAllowed := 0
     return
