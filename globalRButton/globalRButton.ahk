@@ -30,6 +30,7 @@ settimer, MstscWatcher, 10
 #Include %A_ScriptDir%\globalRButton\labels\ctrlWinLeftRight.ahk
 #Include %A_ScriptDir%\globalRButton\labels\count.ahk
 #Include %A_ScriptDir%\globalRButton\labels\altTab.ahk
+#Include %A_ScriptDir%\globalRButton\labels\restoreMaximizeWindow.ahk
 
 #if RButtonEnable
 RButton::gosub _RButton

@@ -30,7 +30,8 @@ ResizeWindow:
     _WinLeft := -1
     _WinWidth := 1
     __Dx := 0
-  } else {
+  } else
+  {
     _WinLeft := 0
     _WinWidth := 0
     __Dx := 0
@@ -45,7 +46,8 @@ ResizeWindow:
     _WinUp := -1
     _WinHeight := 1
     __Dy := 0
-  } else {
+  } else
+  {
     _WinUp := 0
     _WinHeight := 0
     __Dy := 0

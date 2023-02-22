@@ -7,20 +7,29 @@ DoRButtonUp(show, action="松开右键: ")
   {
     case "Center":
     case "RightUp":
+    {
+      switch Mode
+      {
+        case 1:
+        {
+          return RestoreMaximizeWindow(show, action)
+        }
+      }
+    }
     case "RightDown":
     case "LeftDown":
     case "LeftUp":
     case "Up":
     case "Right":
+    {
+      switch Mode
       {
-        switch Mode
+        case 1:
         {
-          case 1:
-          {
-            return AltTab(show, action)
-          }
+          return AltTab(show, action)
         }
       }
+    }
     case "Down":
     case "Left":
   }

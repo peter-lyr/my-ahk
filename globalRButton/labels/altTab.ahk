@@ -5,7 +5,8 @@ AltTab(show, action)
     Send, {Alt Down}{Tab}
     Send, {Alt Up}
     return 1
-  } else {
+  } else
+  {
     _Msg := action
     _Msg .= "<Alt-Tab>"
     PushMsg(_Msg)
