@@ -37,6 +37,10 @@ DoRButtonLButtonDown(show, action="按下左键: ")
   case 1:
     switch Direction {
     case "Center":
+      if (show == 0)
+      {
+        RButtonPressCnt += 1
+      }
     case "RightUp":
     case "RightDown":
     case "LeftDown":
@@ -49,13 +53,73 @@ DoRButtonLButtonDown(show, action="按下左键: ")
     case "Left":
     }
   case 2:
-    msg := 2
+    switch Direction {
+    case "Center":
+      if (show == 0)
+      {
+        RButtonPressCnt += 1
+      }
+      return 0
+    case "RightUp":
+    case "RightDown":
+    case "LeftDown":
+    case "LeftUp":
+    case "Up":
+    case "Right":
+    case "Down":
+    case "Left":
+    }
   case 3:
-    msg := 3
+    switch Direction {
+    case "Center":
+      if (show == 0)
+      {
+        RButtonPressCnt += 1
+      }
+      return 0
+    case "RightUp":
+    case "RightDown":
+    case "LeftDown":
+    case "LeftUp":
+    case "Up":
+    case "Right":
+    case "Down":
+    case "Left":
+    }
   case 4:
-    msg := 4
+    switch Direction {
+    case "Center":
+      if (show == 0)
+      {
+        RButtonPressCnt += 1
+      }
+      return 0
+    case "RightUp":
+    case "RightDown":
+    case "LeftDown":
+    case "LeftUp":
+    case "Up":
+    case "Right":
+    case "Down":
+    case "Left":
+    }
   case 5:
-    msg := 5
+    switch Direction {
+    case "Center":
+      if (show == 0)
+      {
+        RButtonPressCnt := 1
+      }
+      return 0
+    case "RightUp":
+    case "RightDown":
+    case "LeftDown":
+    case "LeftUp":
+    case "Up":
+    case "Right":
+    case "Down":
+    case "Left":
+    }
   }
   return 0
 }

@@ -11,7 +11,6 @@ settimer, MstscWatcher, 10
 
 #Include %A_ScriptDir%\globalRButton\_hotkey.ahk
 #Include %A_ScriptDir%\globalRButton\_circle.ahk
-#Include %A_ScriptDir%\globalRButton\_count.ahk
 #Include %A_ScriptDir%\globalRButton\_mark.ahk
 #Include %A_ScriptDir%\globalRButton\_start.ahk
 #Include %A_ScriptDir%\globalRButton\_end.ahk

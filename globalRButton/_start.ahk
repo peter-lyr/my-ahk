@@ -25,7 +25,7 @@ SelectedWindow(SelectedWindow_Id)
 }
 
 GlobalRButtonStart:
-  settimer, ClickRightWatcher, off
+  RButtonPressCnt := 1
   getkeystate, RButtonSta, RButton, P
   if (RButtonSta == "U")
   {
@@ -33,7 +33,6 @@ GlobalRButtonStart:
   }
   gosub InitGlobalRButton
   gosub DrawCircle
-  gosub CntGlobalRButton
   mousegetpos, SelectedWindow_X, SelectedWindow_Y, SelectedWindow_Id
   SelectedWindow(SelectedWindow_Id)
   settimer, RButtonWatcher, 10
