@@ -29,6 +29,7 @@ settimer, MstscWatcher, 10
 #Include %A_ScriptDir%\globalRButton\labels\paste.ahk
 #Include %A_ScriptDir%\globalRButton\labels\ctrlWinLeftRight.ahk
 #Include %A_ScriptDir%\globalRButton\labels\count.ahk
+#Include %A_ScriptDir%\globalRButton\labels\altTab.ahk
 
 #if RButtonEnable
 RButton::gosub _RButton

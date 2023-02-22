@@ -12,6 +12,15 @@ DoRButtonUp(show, action="松开右键: ")
     case "LeftUp":
     case "Up":
     case "Right":
+      {
+        switch Mode
+        {
+          case 1:
+          {
+            return AltTab(show, action)
+          }
+        }
+      }
     case "Down":
     case "Left":
   }
