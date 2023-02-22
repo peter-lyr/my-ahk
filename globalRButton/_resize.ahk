@@ -5,10 +5,10 @@ ResizeWindow:
   winget, _MaxMaxStatus, MinMax, ahk_id %_MouseWindowId%
   if (_MaxMaxStatus or SelectedWindow_IsDesktop() or LButtonSta == "D")
   {
-    FlagResizeWindow := 0
+    ResizeWindowAllowed := 0
     return
   }
-  FlagResizeWindow := 1
+  ResizeWindowAllowed := 1
   setwindelay, 2
   wingetpos, _X1, _Y1, _W, _H, ahk_id %_MouseWindowId%
   wingetpos, _XX1, _YY1, _WW, _HH, ahk_id %_MouseWindowId%
@@ -48,14 +48,14 @@ ResizeWindow:
     if (((MarkFlagRButton & (1 << 7)) >> 7) == 1)
     {
       winmove, ahk_id %_MouseWindowId%, , _XX1, _YY1, _WW, _HH
-      FlagResizeWindow := 0
+      ResizeWindowAllowed := 0
       tooltip
       break
     }
     getkeystate, MButtonStatus, MBUTTON, P
     if (MButtonStatus == "U")
     {
-      FlagResizeWindow := 0
+      ResizeWindowAllowed := 0
       break
     }
     mousegetpos, _MouseWin_X2, _MouseWin_Y2
