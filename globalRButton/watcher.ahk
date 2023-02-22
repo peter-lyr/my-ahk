@@ -1,7 +1,7 @@
 RButtonActions:
   getkeystate, LButtonSta, LButton, P
   getkeystate, MButtonSta, MButton, P
-  msg := ""
+  msg := RButtonPressCnt
   if (((MarkFlagRButton & (1 << 8)) >> 8) == 0)
   {
     DoRButtonUp(1)

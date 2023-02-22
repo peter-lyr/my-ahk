@@ -31,10 +31,7 @@ DoRButtonLButtonDown(show, action="按下左键: ")
   {
     case "Center":
     {
-      switch RButtonPressCnt
-      {
-        case 1:
-      }
+      CountUpPre(show, action)
     }
   }
   return 0
@@ -49,11 +46,12 @@ DoRButtonLButtonUp(show, action="抬起左键: ")
   {
     case "Center":
     {
-      switch RButtonPressCnt
-      {
-        case 1:
-      }
+      CountUpDo(show, action)
     }
+  }
+  if (show == 0)
+  {
+    gosub CountUpNotAllow
   }
   return 0
 }
@@ -67,10 +65,7 @@ DoRButtonMButtonDown(show, action="按下中键: ")
   {
     case "Center":
     {
-      switch RButtonPressCnt
-      {
-        case 1:
-      }
+      CountDownPre(show, action)
     }
   }
   return 0
@@ -85,11 +80,12 @@ DoRButtonMButtonUp(show, action="抬起中键: ")
   {
     case "Center":
     {
-      switch RButtonPressCnt
-      {
-        case 1:
-      }
+      CountDownDo(show, action)
     }
+  }
+  if (show == 0)
+  {
+    gosub CountDownNotAllow
   }
   return 0
 }
