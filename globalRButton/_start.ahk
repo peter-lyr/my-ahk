@@ -1,5 +1,5 @@
 InitGlobalRButton:
-  MarkFlagRButton = 0
+  MarkFlagRButton := 0
   ; MarkFlagRButtonAll ; 0
   ; MarkFlagRButtonLButton ; 1
   ; MarkFlagRButtonLButtonDown ; 2
