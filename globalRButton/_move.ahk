@@ -1,7 +1,7 @@
 MoveWindowWatch:
   coordmode, Mouse, Screen
   getkeystate, _LButtonStatus, LButton, P
-  if (((((MarkFlagRButton & (1 << 7)) >> 7) == 1) and (Direction != "Center")) or ((_LButtonStatus == "U") and (Direction == "Center")))
+  if (((((MarkFlagRButton & (1 << 7)) >> 7) == 1) and (Direction != "Center")) or (MoveWindowCenterRestoreAllowed and (_LButtonStatus == "U") and (Direction == "Center")))
   {
     settimer, MoveWindowWatch, Off
     winmove, ahk_id %MoveWindow_Id%, , %MoveWindow_OriX%, %MoveWindow_OriY%
@@ -32,6 +32,11 @@ MoveWindow:
   {
     MoveWindowAllowed := 0
     return
+  }
+  MoveWindowCenterRestoreAllowed := 1
+  if (Direction != "Center")
+  {
+    MoveWindowCenterRestoreAllowed := 0
   }
   MoveWindowAllowed := 1
   wingetpos, MoveWindow_OriX, MoveWindow_OriY, , , ahk_id %MoveWindow_Id%

@@ -8,6 +8,11 @@ ResizeWindow:
     ResizeWindowAllowed := 0
     return
   }
+  ResizeWindowCenterRestoreAllowed := 1
+  if (Direction != "Center")
+  {
+    ResizeWindowCenterRestoreAllowed := 0
+  }
   ResizeWindowAllowed := 1
   setwindelay, 2
   wingetpos, _X1, _Y1, _W, _H, ahk_id %_MouseWindowId%
@@ -46,7 +51,7 @@ ResizeWindow:
   }
   Loop {
     getkeystate, MButtonStatus, MBUTTON, P
-    if (((((MarkFlagRButton & (1 << 7)) >> 7) == 1) and (Direction != "Center")) or ((MButtonStatus == "U") and (Direction == "Center")))
+    if (((((MarkFlagRButton & (1 << 7)) >> 7) == 1) and (Direction != "Center")) or (ResizeWindowCenterRestoreAllowed and (MButtonStatus == "U") and (Direction == "Center")))
     {
       winmove, ahk_id %_MouseWindowId%, , _XX1, _YY1, _WW, _HH
       ResizeWindowAllowed := 0
