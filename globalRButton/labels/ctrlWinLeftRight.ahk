@@ -10,6 +10,7 @@ CtrlWinRight(show, action)
     _Msg .= "切换下一个虚拟桌面"
     PushMsg(_Msg)
   }
+  return 0
 }
 
 CtrlWinLeft(show, action)
@@ -24,4 +25,5 @@ CtrlWinLeft(show, action)
     _Msg .= "切换上一个虚拟桌面"
     PushMsg(_Msg)
   }
+  return 0
 }

@@ -20,6 +20,7 @@ PastePre(show, action)
     }
     PushMsg(_Msg)
   }
+  return 0
 }
 
 PasteDo(show, action)
@@ -40,4 +41,5 @@ PasteDo(show, action)
     }
     PushMsg(_Msg)
   }
+  return 0
 }

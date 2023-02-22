@@ -143,6 +143,16 @@ DoRButtonWheelDown(show, action="向下滚轮: ")
         }
       }
     }
+    case "Center":
+    {
+      switch Mode
+      {
+        case 1:
+        {
+          return ShiftWheelDown(show, action)
+        }
+      }
+    }
   }
   return 0
 }
@@ -161,6 +171,16 @@ DoRButtonWheelUp(show, action="向上滚轮: ")
         case 1:
         {
           return CtrlWinLeft(show, action)
+        }
+      }
+    }
+    case "Center":
+    {
+      switch Mode
+      {
+        case 1:
+        {
+          return ShiftWheelUp(show, action)
         }
       }
     }
