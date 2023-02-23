@@ -1,3 +1,7 @@
+MoveWindowCenterRestoreNotAllow:
+  MoveWindowCenterRestoreAllowed := 0
+return
+
 CoorModeMouseScreen:
   if (!RegexMatch(A_CoordModeMouse, "i)screen"))
   {
@@ -44,7 +48,7 @@ MoveWindow:
   MoveWindowCenterRestoreAllowed := 1
   if (Direction != "Center")
   {
-    MoveWindowCenterRestoreAllowed := 0
+    gosub MoveWindowCenterRestoreNotAllow
   }
   MoveWindowAllowed := 1
   wingetpos, MoveWindow_OriX, MoveWindow_OriY, , , ahk_id %MoveWindow_Id%

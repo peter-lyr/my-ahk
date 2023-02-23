@@ -1,3 +1,7 @@
+ResizeWindowCenterRestoreNotAllow:
+  ResizeWindowCenterRestoreAllowed := 0
+return
+
 ResizeWindow:
   getkeystate, MButtonSta, MButton, P
   gosub CoorModeMouseScreen
@@ -12,7 +16,7 @@ ResizeWindow:
   ResizeWindowCenterRestoreAllowed := 1
   if (Direction != "Center")
   {
-    ResizeWindowCenterRestoreAllowed := 0
+    gosub ResizeWindowCenterRestoreNotAllow
   }
   ResizeWindowAllowed := 1
   setwindelay, 0

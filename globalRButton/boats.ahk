@@ -138,9 +138,13 @@ DoRButtonLButtonUp(show, action="抬起左键: ")
       }
     }
   }
-  if (show == 0)
+  if (show == 0 or Direction != "Center")
   {
     gosub CountUpNotAllow
+    if (Direction != "Center")
+    {
+      gosub MoveWindowCenterRestoreNotAllow
+    }
   }
   return ret
 }
@@ -194,9 +198,13 @@ DoRButtonMButtonUp(show, action="抬起中键: ")
       }
     }
   }
-  if (show == 0)
+  if (show == 0 or Direction != "Center")
   {
     gosub CountDownNotAllow
+    if (Direction != "Center")
+    {
+      gosub ResizeWindowCenterRestoreNotAllow
+    }
   }
   return ret
 }
