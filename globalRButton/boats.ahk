@@ -3,6 +3,7 @@ DoRButtonUp(show, action="松开右键: ")
   global Mode
   global Direction
   global msg
+  ret := 0
   switch Direction
   {
     case "Center":
@@ -11,7 +12,7 @@ DoRButtonUp(show, action="松开右键: ")
       {
         case 2:
         {
-          return ActivateWindow(show, action)
+          ret := ActivateWindow(show, action)
         }
       }
     }
@@ -21,7 +22,7 @@ DoRButtonUp(show, action="松开右键: ")
       {
         case 1:
         {
-          return RestoreMaximizeWindow(show, action)
+          ret := RestoreMaximizeWindow(show, action)
         }
       }
     }
@@ -31,7 +32,7 @@ DoRButtonUp(show, action="松开右键: ")
       {
         case 1:
         {
-          return MinimizeWindow(show, action)
+          ret := MinimizeWindow(show, action)
         }
       }
     }
@@ -41,7 +42,7 @@ DoRButtonUp(show, action="松开右键: ")
       {
         case 1:
         {
-          return ExplorerNavigateUp(show, action)
+          ret := ExplorerNavigateUp(show, action)
         }
       }
     }
@@ -52,7 +53,7 @@ DoRButtonUp(show, action="松开右键: ")
       {
         case 1:
         {
-          return TopMostToggle(show, action)
+          ret := TopMostToggle(show, action)
         }
       }
     }
@@ -62,7 +63,7 @@ DoRButtonUp(show, action="松开右键: ")
       {
         case 1:
         {
-          return AltTab(show, action)
+          ret := AltTab(show, action)
         }
       }
     }
@@ -71,7 +72,7 @@ DoRButtonUp(show, action="松开右键: ")
       {
         case 1:
         {
-          return TransparencyToggle(show, action)
+          ret := TransparencyToggle(show, action)
         }
       }
     case "Left":
@@ -80,13 +81,12 @@ DoRButtonUp(show, action="松开右键: ")
       {
         case 1:
         {
-          return CtrlAltTab(show, action)
-
+          ret := CtrlAltTab(show, action)
         }
       }
     }
   }
-  return 0
+  return ret
 }
 
 DoRButtonLButtonDown(show, action="按下左键: ")
@@ -94,11 +94,12 @@ DoRButtonLButtonDown(show, action="按下左键: ")
   global Mode
   global Direction
   global msg
+  ret := 0
   switch Direction
   {
     case "Center":
     {
-      return CountUpPre(show, action)
+      ret := CountUpPre(show, action)
     }
     case "Up":
     {
@@ -106,12 +107,12 @@ DoRButtonLButtonDown(show, action="按下左键: ")
       {
         case 2:
         {
-          return CopyPre(show, action)
+          ret := CopyPre(show, action)
         }
       }
     }
   }
-  return 0
+  return ret
 }
 
 DoRButtonLButtonUp(show, action="抬起左键: ")
@@ -119,11 +120,12 @@ DoRButtonLButtonUp(show, action="抬起左键: ")
   global Mode
   global Direction
   global msg
+  ret := 0
   switch Direction
   {
     case "Center":
     {
-      return CountUpDo(show, action)
+      ret := CountUpDo(show, action)
     }
     case "Up":
     {
@@ -131,7 +133,7 @@ DoRButtonLButtonUp(show, action="抬起左键: ")
       {
         case 2:
         {
-          return CopyDo(show, action)
+          ret := CopyDo(show, action)
         }
       }
     }
@@ -140,7 +142,7 @@ DoRButtonLButtonUp(show, action="抬起左键: ")
   {
     gosub CountUpNotAllow
   }
-  return 0
+  return ret
 }
 
 DoRButtonMButtonDown(show, action="按下中键: ")
@@ -148,11 +150,12 @@ DoRButtonMButtonDown(show, action="按下中键: ")
   global Mode
   global Direction
   global msg
+  ret := 0
   switch Direction
   {
     case "Center":
     {
-      return CountDownPre(show, action)
+      ret := CountDownPre(show, action)
     }
     case "Up":
     {
@@ -160,12 +163,12 @@ DoRButtonMButtonDown(show, action="按下中键: ")
       {
         case 2:
         {
-          return PastePre(show, action)
+          ret := PastePre(show, action)
         }
       }
     }
   }
-  return 0
+  return ret
 }
 
 DoRButtonMButtonUp(show, action="抬起中键: ")
@@ -173,11 +176,12 @@ DoRButtonMButtonUp(show, action="抬起中键: ")
   global Mode
   global Direction
   global msg
+  ret := 0
   switch Direction
   {
     case "Center":
     {
-      return CountDownDo(show, action)
+      ret := CountDownDo(show, action)
     }
     case "Up":
     {
@@ -185,7 +189,7 @@ DoRButtonMButtonUp(show, action="抬起中键: ")
       {
         case 2:
         {
-          return PasteDo(show, action)
+          ret := PasteDo(show, action)
         }
       }
     }
@@ -194,7 +198,7 @@ DoRButtonMButtonUp(show, action="抬起中键: ")
   {
     gosub CountDownNotAllow
   }
-  return 0
+  return ret
 }
 
 DoRButtonWheelDown(show, action="向下滚轮: ")
@@ -202,6 +206,7 @@ DoRButtonWheelDown(show, action="向下滚轮: ")
   global Mode
   global Direction
   global msg
+  ret := 0
   switch Direction
   {
     case "RightDown":
@@ -210,7 +215,7 @@ DoRButtonWheelDown(show, action="向下滚轮: ")
       {
         case 1:
         {
-          return CtrlWinRight(show, action)
+          ret := CtrlWinRight(show, action)
         }
       }
     }
@@ -220,7 +225,7 @@ DoRButtonWheelDown(show, action="向下滚轮: ")
       {
         case 1:
         {
-          return ShiftWheelDown(show, action)
+          ret := ShiftWheelDown(show, action)
         }
       }
     }
@@ -230,7 +235,7 @@ DoRButtonWheelDown(show, action="向下滚轮: ")
       {
         case 1:
         {
-          return VolumeDown(show, action)
+          ret := VolumeDown(show, action)
         }
       }
     }
@@ -239,7 +244,7 @@ DoRButtonWheelDown(show, action="向下滚轮: ")
       {
         case 1:
         {
-          return TransparencyDown(show, action)
+          ret := TransparencyDown(show, action)
         }
       }
     case "RightUp":
@@ -248,12 +253,12 @@ DoRButtonWheelDown(show, action="向下滚轮: ")
       {
         case 1:
         {
-          return ExplorerNavigateBackward(show, action)
+          ret := ExplorerNavigateBackward(show, action)
         }
       }
     }
   }
-  return 0
+  return ret
 }
 
 DoRButtonWheelUp(show, action="向上滚轮: ")
@@ -261,6 +266,7 @@ DoRButtonWheelUp(show, action="向上滚轮: ")
   global Mode
   global Direction
   global msg
+  ret := 0
   switch Direction
   {
     case "RightDown":
@@ -269,7 +275,7 @@ DoRButtonWheelUp(show, action="向上滚轮: ")
       {
         case 1:
         {
-          return CtrlWinLeft(show, action)
+          ret := CtrlWinLeft(show, action)
         }
       }
     }
@@ -279,7 +285,7 @@ DoRButtonWheelUp(show, action="向上滚轮: ")
       {
         case 1:
         {
-          return ShiftWheelUp(show, action)
+          ret := ShiftWheelUp(show, action)
         }
       }
     }
@@ -289,7 +295,7 @@ DoRButtonWheelUp(show, action="向上滚轮: ")
       {
         case 1:
         {
-          return VolumeUp(show, action)
+          ret := VolumeUp(show, action)
         }
       }
     }
@@ -298,7 +304,7 @@ DoRButtonWheelUp(show, action="向上滚轮: ")
       {
         case 1:
         {
-          return TransparencyUp(show, action)
+          ret := TransparencyUp(show, action)
         }
       }
     case "RightUp":
@@ -307,10 +313,10 @@ DoRButtonWheelUp(show, action="向上滚轮: ")
       {
         case 1:
         {
-          return ExplorerNavigateForward(show, action)
+          ret := ExplorerNavigateForward(show, action)
         }
       }
     }
   }
-  return 0
+  return ret
 }
