@@ -25,7 +25,6 @@ SelectedWindow(SelectedWindow_Id)
 }
 
 GlobalRButtonStart:
-  Mode := 1
   getkeystate, RButtonSta, RButton, P
   if (RButtonSta == "U")
   {
