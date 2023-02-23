@@ -23,7 +23,13 @@ settimer, MstscWatcher, 10
 #Include %A_ScriptDir%\globalRButton\_is.ahk
 #Include %A_ScriptDir%\globalRButton\_mstsc.ahk
 #Include %A_ScriptDir%\globalRButton\watcher.ahk
-#Include %A_ScriptDir%\globalRButton\boats.ahk
+#Include %A_ScriptDir%\globalRButton\rbuttonLbuttonDown.ahk
+#Include %A_ScriptDir%\globalRButton\rbuttonLbuttonUp.ahk
+#Include %A_ScriptDir%\globalRButton\rbuttonMbuttonDown.ahk
+#Include %A_ScriptDir%\globalRButton\rbuttonMbuttonUp.ahk
+#Include %A_ScriptDir%\globalRButton\rbuttonUp.ahk
+#Include %A_ScriptDir%\globalRButton\rbuttonWheelDown.ahk
+#Include %A_ScriptDir%\globalRButton\rbuttonWheelUp.ahk
 #Include %A_ScriptDir%\globalRButton\labels\shiftWheel.ahk
 #Include %A_ScriptDir%\globalRButton\labels\copy.ahk
 #Include %A_ScriptDir%\globalRButton\labels\paste.ahk
