@@ -44,6 +44,7 @@ settimer, MstscWatcher, 10
 #Include %A_ScriptDir%\globalRButton\labels\volume.ahk
 #Include %A_ScriptDir%\globalRButton\labels\transparency.ahk
 #Include %A_ScriptDir%\globalRButton\labels\esc.ahk
+#Include %A_ScriptDir%\globalRButton\labels\winComma.ahk
 #Include %A_ScriptDir%\globalRButton\labels\explorer\navigate.ahk
 
 #if RButtonEnable

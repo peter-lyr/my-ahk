@@ -18,6 +18,10 @@ DoRButtonLButtonDown(show, action="按下左键: ")
         {
           ret := CopyPre(show, action)
         }
+        case 3:
+        {
+          ret := WinCommaDown(show, action)
+        }
       }
     }
   }

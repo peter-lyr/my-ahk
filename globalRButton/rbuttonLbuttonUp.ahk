@@ -29,5 +29,6 @@ DoRButtonLButtonUp(show, action="抬起左键: ")
       gosub MoveWindowCenterRestoreNotAllow
     }
   }
+  WinUp(show, action)
   return ret
 }
