@@ -34,6 +34,10 @@ DoRButtonUp(show, action="松开右键: ")
         {
           ret := MinimizeWindow(show, action)
         }
+        case 2:
+        {
+          ret := Esc(show, action)
+        }
       }
     }
     case "LeftDown":
