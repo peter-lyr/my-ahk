@@ -27,7 +27,7 @@ IsExplorer(Title, ProcessName)
   Return 0
 }
 
-IsWindowMoveOrResize()
+IsWindowMoveOrResizeAllowed()
 {
   global Mode
   if (Mode == 1 or Mode == 2)

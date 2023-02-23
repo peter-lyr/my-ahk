@@ -33,7 +33,7 @@ RButtonActions:
       DoRButtonLButtonUp(1)
     }
   }
-  if (IsWindowMoveOrResize())
+  if (IsWindowMoveOrResizeAllowed())
   {
     gosub RButtonL
     gosub RButtonM
