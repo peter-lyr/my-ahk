@@ -9,9 +9,4 @@ MstscWatcher:
   {
     RButtonEnable |= 1 << 0
   }
-  if (RButtonEnable == 0)
-  {
-    gosub HideCircle
-    tooltip
-  }
 Return
