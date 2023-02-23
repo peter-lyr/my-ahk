@@ -10,6 +10,7 @@ ShiftWheelUp(show, action)
     _Msg .= "<shift-wheelup>"
     PushMsg(_Msg)
   }
+  return 0
 }
 
 ShiftWheelDown(show, action)
@@ -24,4 +25,5 @@ ShiftWheelDown(show, action)
     _Msg .= "<shift-wheeldown>"
     PushMsg(_Msg)
   }
+  return 0
 }

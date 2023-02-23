@@ -9,7 +9,8 @@ MouseCursorDirection:
   if (_c <= _gap)
   {
     Direction := "Center"
-  } else {
+  } else
+  {
     _dx := _dx * _gap / _c
     _dy := _dy * _gap / _c
     if (abs(_dx) >= _min and abs(_dx) <= _max and abs(_dy) >= _min and abs(_dy) <= _max)
@@ -23,10 +24,12 @@ MouseCursorDirection:
       } else if (_dx <= 0 and _dy >= 0)
       {
         Direction := "LeftDown"
-      } else {
+      } else
+      {
         Direction := "LeftUp"
       }
-    } else {
+    } else
+    {
       if (abs(_dx) <= _min and _dy <= 0)
       {
         Direction := "Up"
@@ -36,7 +39,8 @@ MouseCursorDirection:
       } else if (abs(_dx) <= _min and _dy >= 0)
       {
         Direction := "Down"
-      } else {
+      } else
+      {
         Direction := "Left"
       }
     }

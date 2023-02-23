@@ -1,6 +1,7 @@
 RButtonEnable := 1
 
-RButtonPressCnt := 0
+Mode := 0
+ModeMax := 5
 
 Direction := ""
 
@@ -27,6 +28,13 @@ settimer, MstscWatcher, 10
 #Include %A_ScriptDir%\globalRButton\labels\copy.ahk
 #Include %A_ScriptDir%\globalRButton\labels\paste.ahk
 #Include %A_ScriptDir%\globalRButton\labels\ctrlWinLeftRight.ahk
+#Include %A_ScriptDir%\globalRButton\labels\count.ahk
+#Include %A_ScriptDir%\globalRButton\labels\altTab.ahk
+#Include %A_ScriptDir%\globalRButton\labels\restoreMaximizeWindow.ahk
+#Include %A_ScriptDir%\globalRButton\labels\topMost.ahk
+#Include %A_ScriptDir%\globalRButton\labels\ctrlAltTab.ahk
+#Include %A_ScriptDir%\globalRButton\labels\activateWindow.ahk
+#Include %A_ScriptDir%\globalRButton\labels\minimizeWindow.ahk
 
 #if RButtonEnable
 RButton::gosub _RButton

@@ -35,7 +35,8 @@ MoveWindow:
   getkeystate, MButtonSta, MButton, P
   mousegetpos, _X1, _Y1, MoveWindow_Id
   winget, _MaxMaxStatus, MinMax, ahk_id %MoveWindow_Id%
-  if (_MaxMaxStatus or SelectedWindow_IsDesktop() or MButtonSta == "D")
+  wingettitle, MoveWindow_Title, ahk_id %MoveWindow_Id%
+  if (_MaxMaxStatus or IsDesktop(MoveWindow_Title) or MButtonSta == "D")
   {
     MoveWindowAllowed := 0
     return

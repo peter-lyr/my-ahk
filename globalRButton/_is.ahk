@@ -1,10 +1,10 @@
-SelectedWindow_IsDesktop()
+IsDesktop(Window_Title)
 {
-  global SelectedWindow_Title
-  if (StrLen(SelectedWindow_Title) > 0 and SelectedWindow_Title != "Program Manager")
+  if (StrLen(Window_Title) > 0 and Window_Title != "Program Manager")
   {
     return 0
-  } else {
+  } else
+  {
     return 1
   }
 }

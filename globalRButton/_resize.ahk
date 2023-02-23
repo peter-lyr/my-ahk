@@ -3,7 +3,8 @@ ResizeWindow:
   gosub CoorModeMouseScreen
   mousegetpos, _MouseWindow_X1, _MouseWindow_Y1, _MouseWindowId
   winget, _MaxMaxStatus, MinMax, ahk_id %_MouseWindowId%
-  if (_MaxMaxStatus or SelectedWindow_IsDesktop() or LButtonSta == "D")
+  wingettitle, _MouseWindow_Title, ahk_id %_MouseWindowId%
+  if (_MaxMaxStatus or IsDesktop(_MouseWindow_Title) or LButtonSta == "D")
   {
     ResizeWindowAllowed := 0
     return
@@ -29,7 +30,8 @@ ResizeWindow:
     _WinLeft := -1
     _WinWidth := 1
     __Dx := 0
-  } else {
+  } else
+  {
     _WinLeft := 0
     _WinWidth := 0
     __Dx := 0
@@ -44,7 +46,8 @@ ResizeWindow:
     _WinUp := -1
     _WinHeight := 1
     __Dy := 0
-  } else {
+  } else
+  {
     _WinUp := 0
     _WinHeight := 0
     __Dy := 0

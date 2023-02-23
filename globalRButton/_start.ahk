@@ -1,5 +1,5 @@
 InitGlobalRButton:
-  MarkFlagRButton = 0
+  MarkFlagRButton := 0
   ; MarkFlagRButtonAll ; 0
   ; MarkFlagRButtonLButton ; 1
   ; MarkFlagRButtonLButtonDown ; 2
@@ -25,7 +25,7 @@ SelectedWindow(SelectedWindow_Id)
 }
 
 GlobalRButtonStart:
-  RButtonPressCnt := 1
+  Mode := 1
   getkeystate, RButtonSta, RButton, P
   if (RButtonSta == "U")
   {

@@ -1,7 +1,7 @@
 RButtonActions:
   getkeystate, LButtonSta, LButton, P
   getkeystate, MButtonSta, MButton, P
-  msg := ""
+  msg := Mode
   if (((MarkFlagRButton & (1 << 8)) >> 8) == 0)
   {
     DoRButtonUp(1)
@@ -31,7 +31,7 @@ RButtonActions:
       DoRButtonLButtonUp(1)
     }
   }
-  if (RButtonPressCnt == 1)
+  if (Mode == 1)
   {
     gosub RButtonL
     gosub RButtonM
