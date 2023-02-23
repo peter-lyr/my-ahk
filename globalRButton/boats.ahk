@@ -208,6 +208,16 @@ DoRButtonWheelDown(show, action="向下滚轮: ")
         }
       }
     }
+    case "Up":
+    {
+      switch Mode
+      {
+        case 1:
+        {
+          return VolumeDown(show, action)
+        }
+      }
+    }
   }
   return 0
 }
@@ -236,6 +246,16 @@ DoRButtonWheelUp(show, action="向上滚轮: ")
         case 1:
         {
           return ShiftWheelUp(show, action)
+        }
+      }
+    }
+    case "Up":
+    {
+      switch Mode
+      {
+        case 1:
+        {
+          return VolumeUp(show, action)
         }
       }
     }

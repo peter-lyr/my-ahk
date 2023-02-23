@@ -35,6 +35,7 @@ settimer, MstscWatcher, 10
 #Include %A_ScriptDir%\globalRButton\labels\ctrlAltTab.ahk
 #Include %A_ScriptDir%\globalRButton\labels\activateWindow.ahk
 #Include %A_ScriptDir%\globalRButton\labels\minimizeWindow.ahk
+#Include %A_ScriptDir%\globalRButton\labels\volume.ahk
 
 #if RButtonEnable
 RButton::gosub _RButton
