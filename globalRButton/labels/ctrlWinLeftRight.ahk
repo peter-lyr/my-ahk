@@ -2,9 +2,9 @@ CtrlWinRight(show, action)
 {
   if (show == 0)
   {
-    Send, {Ctrl Down}{LWin Down}{Right}
-    Send, {Ctrl Up}
-    Send, {LWin Up}
+    send, {Ctrl Down}{LWin Down}{Right}
+    send, {Ctrl Up}
+    send, {LWin Up}
   } else
   {
     _Msg := action
@@ -18,9 +18,9 @@ CtrlWinLeft(show, action)
 {
   if (show == 0)
   {
-    Send, {Ctrl Down}{LWin Down}{Left}
-    Send, {Ctrl Up}
-    Send, {LWin Up}
+    send, {Ctrl Down}{LWin Down}{Left}
+    send, {Ctrl Up}
+    send, {LWin Up}
   } else
   {
     _Msg := action

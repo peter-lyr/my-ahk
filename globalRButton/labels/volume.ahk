@@ -2,7 +2,7 @@ VolumeUp(show, action)
 {
   if (show == 0)
   {
-    Send, {Volume_Up}
+    send, {Volume_Up}
   } else
   {
     _Msg := action
@@ -16,7 +16,7 @@ VolumeDown(show, action)
 {
   if (show == 0)
   {
-    Send, {Volume_Down}
+    send, {Volume_Down}
   } else
   {
     _Msg := action

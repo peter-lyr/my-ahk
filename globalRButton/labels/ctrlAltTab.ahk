@@ -2,9 +2,9 @@ CtrlAltTab(show, action)
 {
   if (show == 0)
   {
-    Send, {Alt Down}{Ctrl Down}{Tab}
-    Send, {Alt Up}
-    Send, {Ctrl Up}
+    send, {Alt Down}{Ctrl Down}{Tab}
+    send, {Alt Up}
+    send, {Ctrl Up}
     return 1
   } else
   {

@@ -2,8 +2,8 @@ AltTab(show, action)
 {
   if (show == 0)
   {
-    Send, {Alt Down}{Tab}
-    Send, {Alt Up}
+    send, {Alt Down}{Tab}
+    send, {Alt Up}
     return 1
   } else
   {

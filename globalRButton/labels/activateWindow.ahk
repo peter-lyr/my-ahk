@@ -4,7 +4,7 @@ ActivateWindow(show, action)
   global SelectedWindow_Id
   if (show == 0)
   {
-    WinActivate, ahk_id %SelectedWindow_Id%
+    winactivate, ahk_id %SelectedWindow_Id%
     return 1
   } else
   {

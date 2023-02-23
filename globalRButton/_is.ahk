@@ -9,13 +9,20 @@ IsDesktop(Window_Title)
   }
 }
 
-SelectedWindow_IsExplorer()
+IsDesktopOrExplorer(ProcessName)
 {
-  global SelectedWindow_Title
-  global SelectedWindow_ProcessName
-  if (RegexMatch(SelectedWindow_ProcessName, "i)explorer\.exe") || RegexMatch(SelectedWindow_Title, "i)Program Manager"))
+  if (RegexMatch(ProcessName, "i)explorer\.exe"))
   {
     return 1
   }
   return 0
+}
+
+IsExplorer(Title, ProcessName)
+{
+  if (StrLen(Title) > 0 and RegexMatch(ProcessName, "i)explorer\.exe"))
+  {
+    Return 1
+  }
+  Return 0
 }

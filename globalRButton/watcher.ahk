@@ -2,6 +2,8 @@ RButtonActions:
   getkeystate, LButtonSta, LButton, P
   getkeystate, MButtonSta, MButton, P
   msg := Mode
+  msg .= " - "
+  msg .= SelectedWindow_ProcessName
   if (((MarkFlagRButton & (1 << 8)) >> 8) == 0)
   {
     DoRButtonUp(1)

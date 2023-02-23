@@ -36,6 +36,15 @@ DoRButtonUp(show, action="松开右键: ")
       }
     }
     case "LeftDown":
+    {
+      switch Mode
+      {
+        case 1:
+        {
+          return ExplorerNavigateUp(show, action)
+        }
+      }
+    }
     case "LeftUp":
     case "Up":
     {
@@ -233,7 +242,16 @@ DoRButtonWheelDown(show, action="向下滚轮: ")
           return TransparencyDown(show, action)
         }
       }
-    case "Left":
+    case "RightUp":
+    {
+      switch Mode
+      {
+        case 1:
+        {
+          return ExplorerNavigateBackward(show, action)
+        }
+      }
+    }
   }
   return 0
 }
@@ -283,7 +301,16 @@ DoRButtonWheelUp(show, action="向上滚轮: ")
           return TransparencyUp(show, action)
         }
       }
-    case "Left":
+    case "RightUp":
+    {
+      switch Mode
+      {
+        case 1:
+        {
+          return ExplorerNavigateForward(show, action)
+        }
+      }
+    }
   }
   return 0
 }

@@ -19,7 +19,7 @@ CopyWatcher:
   if (_Clipboard != "")
   {
     settimer, CopyWatcher, Off
-    if (SelectedWindow_IsExplorer() == 1)
+    if (IsDesktopOrExplorer(SelectedWindow_ProcessName) == 1)
     {
       TextCopied := _Clipboard
     } else
