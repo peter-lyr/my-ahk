@@ -31,11 +31,8 @@ RButtonActions:
       DoRButtonLButtonUp(1)
     }
   }
-  if (Mode == 1)
-  {
-    gosub RButtonL
-    gosub RButtonM
-  }
+  gosub RButtonL
+  gosub RButtonM
   if (((MarkFlagRButton & (1 << 7)) >> 7) == 1)
   {
     if (((MarkFlagRButton & (1 << 8)) >> 8) == 0)

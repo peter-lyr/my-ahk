@@ -17,10 +17,7 @@ return
 
 _RButtonLButton:
   gosub _MarkRButtonLButton
-  if (Mode == 1)
-  {
-    gosub MoveWindow
-  }
+  gosub MoveWindow
 return
 
 _RButtonLButtonUp:
@@ -29,10 +26,7 @@ return
 
 _RButtonMButton:
   gosub _MarkRButtonMButton
-  if (Mode == 1)
-  {
-    gosub ResizeWindow
-  }
+  gosub ResizeWindow
 return
 
 _RButtonMButtonUp:
