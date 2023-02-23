@@ -58,6 +58,13 @@ DoRButtonUp(show, action="松开右键: ")
       }
     }
     case "Down":
+      switch Mode
+      {
+        case 1:
+        {
+          return TransparencyToggle(show, action)
+        }
+      }
     case "Left":
     {
       switch Mode
@@ -218,6 +225,15 @@ DoRButtonWheelDown(show, action="向下滚轮: ")
         }
       }
     }
+    case "Down":
+      switch Mode
+      {
+        case 1:
+        {
+          return TransparencyDown(show, action)
+        }
+      }
+    case "Left":
   }
   return 0
 }
@@ -259,6 +275,15 @@ DoRButtonWheelUp(show, action="向上滚轮: ")
         }
       }
     }
+    case "Down":
+      switch Mode
+      {
+        case 1:
+        {
+          return TransparencyUp(show, action)
+        }
+      }
+    case "Left":
   }
   return 0
 }
