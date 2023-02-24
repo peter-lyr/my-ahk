@@ -1,3 +1,5 @@
+; DoRButtonXXX返回1立刻销毁消息
+; DoRButtonXXX返回0不销毁消息
 RButtonActions:
   getkeystate, LButtonSta, LButton, P
   getkeystate, MButtonSta, MButton, P

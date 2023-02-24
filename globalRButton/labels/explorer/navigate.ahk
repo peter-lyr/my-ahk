@@ -10,7 +10,9 @@ ExplorerNavigateUp(show, action)
       winactivate, ahk_id %SelectedWindow_Id%
       send, {Alt Down}{Up}
       send, {Alt Up}
+      return 1
     }
+    return -1
   } else
   {
     if (IsExplorer(SelectedWindow_Title, SelectedWindow_ProcessName))
@@ -34,7 +36,9 @@ ExplorerNavigateForward(show, action)
       winactivate, ahk_id %SelectedWindow_Id%
       send, {Alt Down}{Right}
       send, {Alt Up}
+      return 1
     }
+    return -1
   } else
   {
     if (IsExplorer(SelectedWindow_Title, SelectedWindow_ProcessName))
@@ -58,7 +62,9 @@ ExplorerNavigateBackward(show, action)
       winactivate, ahk_id %SelectedWindow_Id%
       send, {Alt Down}{Left}
       send, {Alt Up}
+      return 1
     }
+    return -1
   } else
   {
     if (IsExplorer(SelectedWindow_Title, SelectedWindow_ProcessName))

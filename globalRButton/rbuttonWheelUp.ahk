@@ -3,7 +3,7 @@ DoRButtonWheelUp(show, action="向上滚轮: ")
   global Mode
   global Direction
   global msg
-  ret := 0
+  ret := -1
   switch Direction
   {
     case "RightDown":
@@ -55,5 +55,6 @@ DoRButtonWheelUp(show, action="向上滚轮: ")
       }
     }
   }
+  ret := NotDefinedEventDo(show, ret)
   return ret
 }

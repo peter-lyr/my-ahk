@@ -3,7 +3,7 @@ DoRButtonMButtonUp(show, action="抬起中键: ")
   global Mode
   global Direction
   global msg
-  ret := 0
+  ret := -1
   switch Direction
   {
     case "Center":
@@ -29,5 +29,6 @@ DoRButtonMButtonUp(show, action="抬起中键: ")
       gosub ResizeWindowCenterRestoreNotAllow
     }
   }
+  ret := NotDefinedEventDo(show, ret)
   return ret
 }

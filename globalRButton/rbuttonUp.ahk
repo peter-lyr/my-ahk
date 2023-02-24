@@ -3,7 +3,7 @@ DoRButtonUp(show, action="松开右键: ")
   global Mode
   global Direction
   global msg
-  ret := 0
+  ret := -1
   switch Direction
   {
     case "Center":
@@ -90,5 +90,6 @@ DoRButtonUp(show, action="松开右键: ")
       }
     }
   }
+  ret := NotDefinedEventDo(show, ret)
   return ret
 }

@@ -22,6 +22,7 @@ settimer, MstscWatcher, 10
 #Include %A_ScriptDir%\globalRButton\_resize.ahk
 #Include %A_ScriptDir%\globalRButton\_is.ahk
 #Include %A_ScriptDir%\globalRButton\_mstsc.ahk
+#Include %A_ScriptDir%\globalRButton\_define.ahk
 #Include %A_ScriptDir%\globalRButton\watcher.ahk
 #Include %A_ScriptDir%\globalRButton\rbuttonLbuttonDown.ahk
 #Include %A_ScriptDir%\globalRButton\rbuttonLbuttonUp.ahk

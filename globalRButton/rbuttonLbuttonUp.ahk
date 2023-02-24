@@ -3,7 +3,7 @@ DoRButtonLButtonUp(show, action="抬起左键: ")
   global Mode
   global Direction
   global msg
-  ret := 0
+  ret := -1
   switch Direction
   {
     case "Center":
@@ -30,5 +30,6 @@ DoRButtonLButtonUp(show, action="抬起左键: ")
     }
   }
   WinUp(show, action)
+  ret := NotDefinedEventDo(show, ret)
   return ret
 }

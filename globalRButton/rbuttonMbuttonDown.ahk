@@ -3,7 +3,7 @@ DoRButtonMButtonDown(show, action="按下中键: ")
   global Mode
   global Direction
   global msg
-  ret := 0
+  ret := -1
   switch Direction
   {
     case "Center":
@@ -21,5 +21,6 @@ DoRButtonMButtonDown(show, action="按下中键: ")
       }
     }
   }
+  ret := NotDefinedEventDo(show, ret)
   return ret
 }
