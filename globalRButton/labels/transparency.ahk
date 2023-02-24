@@ -18,7 +18,6 @@ TransparencyToggle(show, action)
       {
         WinSet, Transparent, 200, ahk_id %SelectedWindow_Id%
       }
-      tooltip
     }
   } else
   {
@@ -45,6 +44,7 @@ TransparencyToggle(show, action)
     }
     PushMsg(_Msg)
   }
+  return 0
 }
 
 TransparencyDown(show, action)
@@ -81,6 +81,7 @@ TransparencyDown(show, action)
     }
     PushMsg(_Msg)
   }
+  return 0
 }
 
 TransparencyUp(show, action)
@@ -117,4 +118,5 @@ TransparencyUp(show, action)
     }
     PushMsg(_Msg)
   }
+  return 0
 }

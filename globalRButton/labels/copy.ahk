@@ -59,4 +59,5 @@ CopyDo(show, action)
     _Msg .= "复制"
     PushMsg(_Msg)
   }
+  return 0
 }

@@ -3,6 +3,7 @@ Esc(show, action)
   if (show == 0)
   {
     send, {Esc}
+    return 1
   } else
   {
     _Msg := action
