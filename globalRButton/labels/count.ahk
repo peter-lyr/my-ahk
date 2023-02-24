@@ -9,6 +9,8 @@ CountUpPre(show, action)
   if (show == 0)
   {
     CountUpAllowed := 1
+    settimer, CountUpNotAllow, -300
+    settimer, MoveWindowCenterRestoreNotAllow, -300
   } else
   {
     _Msg := action
@@ -56,6 +58,8 @@ CountDownPre(show, action)
   if (show == 0)
   {
     CountDownAllowed := 1
+    settimer, CountDownNotAllow, -300
+    settimer, ResizeWindowCenterRestoreNotAllow, -300
   } else
   {
     _Msg := action
