@@ -10,4 +10,8 @@ GlobalRButtonEnd:
   }
   gosub HideCircle
   settimer, RemoveTooltip, -2200
+  if (((MarkFlagRButton & (1 << 8)) >> 8))
+  {
+    settimer, RemoveTooltip, -20
+  }
 return
