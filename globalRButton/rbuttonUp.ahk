@@ -8,6 +8,7 @@ DoRButtonUp(show, action="松开右键: ")
   {
     case "Center":
     {
+      ModeFixDetect(show, action)
       switch Mode
       {
         case 2:
