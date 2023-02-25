@@ -5,24 +5,26 @@ ModeMax := 5
 
 Direction := ""
 
+ModeFixed := 0
+
 TextCopied:=Short(clipboard)
 
 gosub InitCircle
 settimer, MstscWatcher, 10
 
-#Include %A_ScriptDir%\globalRButton\_hotkey.ahk
-#Include %A_ScriptDir%\globalRButton\_circle.ahk
-#Include %A_ScriptDir%\globalRButton\_mark.ahk
-#Include %A_ScriptDir%\globalRButton\_start.ahk
-#Include %A_ScriptDir%\globalRButton\_end.ahk
-#Include %A_ScriptDir%\globalRButton\_direction.ahk
-#Include %A_ScriptDir%\globalRButton\_msg.ahk
-#Include %A_ScriptDir%\globalRButton\_rbuttonLM.ahk
-#Include %A_ScriptDir%\globalRButton\_move.ahk
-#Include %A_ScriptDir%\globalRButton\_resize.ahk
-#Include %A_ScriptDir%\globalRButton\_is.ahk
-#Include %A_ScriptDir%\globalRButton\_mstsc.ahk
-#Include %A_ScriptDir%\globalRButton\_define.ahk
+#Include %A_ScriptDir%\globalRButton\_\_hotkey.ahk
+#Include %A_ScriptDir%\globalRButton\_\_circle.ahk
+#Include %A_ScriptDir%\globalRButton\_\_mark.ahk
+#Include %A_ScriptDir%\globalRButton\_\_start.ahk
+#Include %A_ScriptDir%\globalRButton\_\_end.ahk
+#Include %A_ScriptDir%\globalRButton\_\_direction.ahk
+#Include %A_ScriptDir%\globalRButton\_\_msg.ahk
+#Include %A_ScriptDir%\globalRButton\_\_rbuttonLM.ahk
+#Include %A_ScriptDir%\globalRButton\_\_move.ahk
+#Include %A_ScriptDir%\globalRButton\_\_resize.ahk
+#Include %A_ScriptDir%\globalRButton\_\_is.ahk
+#Include %A_ScriptDir%\globalRButton\_\_mstsc.ahk
+#Include %A_ScriptDir%\globalRButton\_\_define.ahk
 #Include %A_ScriptDir%\globalRButton\watcher.ahk
 #Include %A_ScriptDir%\globalRButton\rbuttonLbuttonDown.ahk
 #Include %A_ScriptDir%\globalRButton\rbuttonLbuttonUp.ahk
@@ -46,6 +48,7 @@ settimer, MstscWatcher, 10
 #Include %A_ScriptDir%\globalRButton\labels\transparency.ahk
 #Include %A_ScriptDir%\globalRButton\labels\esc.ahk
 #Include %A_ScriptDir%\globalRButton\labels\winComma.ahk
+#Include %A_ScriptDir%\globalRButton\labels\modeFix.ahk
 #Include %A_ScriptDir%\globalRButton\labels\explorer\navigate.ahk
 
 #if RButtonEnable

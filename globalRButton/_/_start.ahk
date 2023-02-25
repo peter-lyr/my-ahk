@@ -30,6 +30,10 @@ GlobalRButtonStart:
   {
     return
   }
+  if (ModeFixed == 0)
+  {
+    Mode := 1
+  }
   gosub InitGlobalRButton
   gosub DrawCircle
   mousegetpos, SelectedWindow_X, SelectedWindow_Y, SelectedWindow_Id

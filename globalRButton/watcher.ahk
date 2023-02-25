@@ -6,6 +6,17 @@ RButtonActions:
   msg := Mode
   msg .= " - "
   msg .= SelectedWindow_ProcessName
+  msg .= " ("
+  msg .= SelectedWindow_X
+  msg .= ", "
+  msg .= SelectedWindow_Y
+  msg .= ")"
+  mousegetpos, _Xtemp, _Ytemp
+  msg .= " -> ("
+  msg .= _Xtemp
+  msg .= ", "
+  msg .= _Ytemp
+  msg .= ")"
   if (((MarkFlagRButton & (1 << 8)) >> 8) == 0)
   {
     DoRButtonUp(1)
