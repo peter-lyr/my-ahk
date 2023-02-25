@@ -1,10 +1,8 @@
 RButtonEnable := 1
+Direction := ""
 
 Mode := 1
 ModeMax := 5
-
-Direction := ""
-
 ModeFixed := 0
 
 TextCopied:=Short(clipboard)

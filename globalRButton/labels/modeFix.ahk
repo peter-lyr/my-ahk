@@ -1,29 +1,30 @@
-ModeFixDetect(show, action)
+ModeFixToggle(show, action)
 {
   global Mode
   global ModeFixed
-  if (IsRButtonPosX0Y0())
+  if (show == 0)
   {
-    if (show == 0)
+    if (ModeFixed == 1)
     {
-      if (Mode > 1)
-      {
-        ModeFixed := 0
-      } else
-      {
-        ModeFixed := 1
-      }
+      ModeFixed := 0
     } else
     {
-      _Msg := action
-      if (Mode > 1)
-      {
-        _Msg .= "Mode 1"
-      } else
-      {
-        _Msg .= "Fix Mode"
-      }
-      PushMsg(_Msg)
+      ModeFixed := 1
     }
+    _Msg := "ModeFixed: "
+    _Msg .= ModeFixed
+    PushMsg(_Msg)
+  } else
+  {
+    _Msg := action
+    if (ModeFixed == 1)
+    {
+      _Msg .= "Don't Fix Mode"
+    } else
+    {
+      _Msg .= "Fix Mode"
+    }
+    PushMsg(_Msg)
   }
+  return 0
 }

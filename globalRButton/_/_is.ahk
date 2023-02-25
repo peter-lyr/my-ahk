@@ -36,14 +36,3 @@ IsWindowMoveOrResizeAllowed()
   }
   return 0
 }
-
-IsRButtonPosX0Y0()
-{
-  global SelectedWindow_X
-  global SelectedWindow_Y
-  if (SelectedWindow_X == 0 and SelectedWindow_Y == 0)
-  {
-    return 1
-  }
-  return 0
-}

@@ -8,7 +8,6 @@ DoRButtonUp(show, action="松开右键: ")
   {
     case "Center":
     {
-      ModeFixDetect(show, action)
       switch Mode
       {
         case 2:
@@ -59,6 +58,10 @@ DoRButtonUp(show, action="松开右键: ")
         case 1:
         {
           ret := TopMostToggle(show, action)
+        }
+        case 3:
+        {
+          ret := ModeFixToggle(show, action)
         }
       }
     }
